@@ -6,7 +6,7 @@ Home | Catch A Vibes
 
 @section('body')
 
-
+{{-- ----------------------------------- slider ------------------------------------------------------------------------------- --}}
 <header>
   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 
@@ -67,6 +67,12 @@ Home | Catch A Vibes
         </a>
   </div>
 </header>
+
+
+{{-- ----------------------------------- End slider ------------------------------------------------------------------------------- --}}
+
+
+
 {{-- ----------------------------------------------- BOOKING SECTION ---------------------------------------- --}}
 <div class="booking ">
     <div class="booking-form container">
@@ -81,17 +87,26 @@ Home | Catch A Vibes
 <div class="row no-margin">
 <div class="col-md-4">
 <div class="form-group">
-<span class="form-label">Check In</span>
-<input class="form-control" type="date">
+<span class="form-label">Destination</span>
+<select class="form-control">
+<option>Kingston</option>
+<option>Portland</option>
+<option>Montego Bay</option>
+<option>Ocho Rios</option>
+<option>Negril</option>
+<option>All Destinations</option>
+</select>
 </div>
 </div>
+
 <div class="col-md-4">
 <div class="form-group">
-<span class="form-label">Check out</span>
+<span class="form-label">Tour Date</span>
 <input class="form-control" type="date">
 </div>
 </div>
-<div class="col-md-2">
+
+<div class="col-md-4">
 <div class="form-group">
 <span class="form-label">Guests</span>
 <select class="form-control">
@@ -102,22 +117,12 @@ Home | Catch A Vibes
 <span class="select-arrow"></span>
 </div>
 </div>
-<div class="col-md-2">
-<div class="form-group">
-<span class="form-label">Kids</span>
-<select class="form-control">
-<option>0</option>
-<option>1</option>
-<option>2</option>
-</select>
-<span class="select-arrow"></span>
-</div>
-</div>
+
 </div>
 </div>
 <div class="col-md-2">
 <div class="form-btn">
-<button class="submit-btn">Check availability</button>
+<button class="submit-btn">Book Tour</button>
 </div>
 </div>
 </div>
@@ -127,34 +132,38 @@ Home | Catch A Vibes
 </div>
 {{-- -------------------------------------------end  BOOKING SECTION ---------------------------------------- --}}
 <!-- Page Content -->
+
+
+
+
+{{-- -------------------------------- Company Introduction -------------------------------------------------------------- --}}
 <section class="py-5">
   <div class="container">
-    <h1 class="web-title1">Professional and friendly tour experiences</h1>
+    <h1 class="web-title1">Company Introduction</h1>
     <p class="lead">
-        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+        We offer a variety of tour experiences to major destinations including Kingston, Montego Bay, Negril, Ocho Rios, and Portland. Licensed and certified tour operators and tour guides through The Tourist Product Developemnt Company will make your experiences memorable and safe. We pride ourselves through differentiation from our competitors.
     </p>
   </div>
 </section>
+{{-- -------------------------------- End Company Introduction -------------------------------------------------------------- --}}
+
+
+
+{{-- -------------------------------- Destinations -------------------------------------------------------------- --}}
+
 
 <div class="container-fluid promobg d-flex justify-content-center align-items-center"  style="background-image: linear-gradient(0deg, rgba(5, 5, 5, 0.5), rgba(46, 42, 44, 0.5)),url('images/general/offergbg2.jpg')">
     <div class="deals-section">
-        <p class="web-title2">SUMMER TOUR DEAL</p>
-        <p class="web-title3">Ocho Rios - Montego Bay</p>
-        <p class="web-text1">July 25 - September 10</p>
-        <p class="web-text2">$3500 Per person</p>
+        <p class="web-title2">Our Tour Destinations</p>
+        <p class="web-title3">Kingston - Ocho Rios - Montego Bay - Negril - Portland</p>
+        <p class="web-text1">Tours packages starting at </p>
+        <p class="web-text2">$180 USD Per person</p>
     </div>
 </div>
+{{-- -------------------------------- End Destinations -------------------------------------------------------------- --}}
 
 
-<div class="container">
-
-    <div class="row">
-
-    </div>
-
-</div>
-
-
+{{-- -----------------------------------------services offered ---------------------------------------------------------- --}}
 <div class="services-section">
     <div class="container ">
     <p class="service-title-text">SERVICES OFFERED</p>
@@ -183,6 +192,62 @@ Home | Catch A Vibes
     </div>
 </div>
 
+{{-- -----------------------------------------services offered ---------------------------------------------------------- --}}
+
+{{-- -----------------------------------------Photo Gallery  ---------------------------------------------------------- --}}
+<div class="container">
+
+    <!-- Gallery -->
+<div class="row">
+  <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+    <img
+      src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt=""
+    />
+
+    <img
+      src="https://mdbootstrap.com/img/Photos/Vertical/mountain1.jpg"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt=""
+    />
+  </div>
+
+  <div class="col-lg-4 mb-4 mb-lg-0">
+    <img
+      src="https://mdbootstrap.com/img/Photos/Vertical/mountain2.jpg"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt=""
+    />
+
+    <img
+      src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt=""
+    />
+  </div>
+
+  <div class="col-lg-4 mb-4 mb-lg-0">
+    <img
+      src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt=""
+    />
+
+    <img
+      src="https://mdbootstrap.com/img/Photos/Vertical/mountain3.jpg"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt=""
+    />
+  </div>
+</div>
+<!-- Gallery -->
+
+</div>
+{{-- ----------------------------------------- End Photo Gallery  ---------------------------------------------------------- --}}
+
+
+{{-- -----------------------------------------footer ---------------------------------------------------------- --}}
 <footer id="main-footer">
             <div class="container">
                 <div class="row row-wrap">
@@ -241,4 +306,5 @@ Home | Catch A Vibes
                 </div>
             </div>
         </footer>
+        {{-- ----------------------------------------- end footer ---------------------------------------------------------- --}}
 @endsection
