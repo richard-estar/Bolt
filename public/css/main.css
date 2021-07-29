@@ -1,0 +1,215 @@
+body
+{
+    /* font-family: 'Roboto', arial, helvetica, sans-serif; */
+    font-family: 'Barlow', sans-serif;
+}
+.carousel-item {
+  height: 100vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.slidetxt
+{
+   line-height: 1em;
+    font-size: 120px;
+    font-weight: 300;
+    display: table;
+    margin: 10px auto;
+    margin-bottom: 50px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    border-top: 1px solid rgba(255,255,255,0.2);
+    text-transform: uppercase;
+}
+
+.bg-dark {
+    background-color: #460173!important;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #E79F09;
+    border-color: #E79F09;
+}
+
+.btn-primary{
+    border-radius: 0%;
+}
+
+.web-title1
+{
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 45px;
+    margin: 10px auto;
+}
+
+.web-title2
+{
+    text-transform: uppercase;
+    font-weight: 450;
+    font-size: 45px;
+    margin: 10px auto;
+    color: #fff;
+}
+
+.web-title3
+{
+    text-transform: capitalize;
+    font-weight: 350;
+    font-size: 55px;
+    margin: 10px auto;
+    color: #fff;
+}
+
+.web-text1
+{
+    text-transform: capitalize;
+    font-weight: 450;
+    font-size: 30px;
+    font-style: italic;
+    margin: 10px auto;
+    color: #fff;
+}
+
+.web-text2
+{
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: 20px;
+    margin: 10px auto;
+    color: #fff;
+}
+
+.promobg
+{
+     min-height: 350px;
+  background: no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.list-display li {
+  margin-bottom:.4rem;
+  font-size:1.1rem;
+}
+.list-checkmarks {
+  padding-left:1.5rem;
+}
+.list-checkmarks li {
+  list-style-type:none;
+  padding-left:1rem;
+}
+.list-checkmarks li:before {
+font-family: 'FontAwesome';
+content: "\f00c";
+margin:0 10px 0 -28px;
+color: #17aa1c;
+}
+
+.services-section
+{
+    background-color: #F2F1EE;
+    margin: 0;
+    padding-bottom: 25px;
+}
+
+.service-title-text
+{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 45px;
+    padding: 20px;
+    color: #460173;
+}
+
+
+.deals-section
+{
+    text-align: center;
+}
+
+.test-bg
+{
+    background-color: #E79F09;
+}
+
+.booking
+{
+    background-color: #F2F1EE;
+
+}
+
+.booking-form
+{
+    padding: 50px 0;
+}
+.booking-form .form-header h2 {
+    margin: 0;
+    display: inline-block;
+    font-size: 52px;
+    color: #E79F09;
+}
+
+.booking-form .submit-btn {
+    background: #E79F09;
+    color: #fff;
+    border: none;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: block;
+    height: 80px;
+    width: 100%;
+}
+
+footer#main-footer {
+    background: #262626;
+    padding: 60px 0 30px 0;
+    color: #e6e6e6;
+    font-size: 11px;
+    line-height: 1.4em;
+}
+
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.list-horizontal:after, .list-inline:after {
+    content: '.';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.logo {
+    display: block;
+}
+
+.list-footer > li {
+  margin-bottom: 5px;
+}
+.list-footer > li > a:hover {
+  text-decoration: underline;
+}
+
+.footerlink
+{
+    color: #E79F09;
+}
+
+.icons
+{
+    font-size:25px;
+    padding:0 5px
+}
