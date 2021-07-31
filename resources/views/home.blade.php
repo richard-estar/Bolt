@@ -19,7 +19,7 @@ Home | Catch A Vibes
     <div class="carousel-inner" role="listbox">
 
       <!-- Slide One - Set the background image for this slide in the line below -->
-      <div class="carousel-item active" style="background-image:linear-gradient(0deg, rgba(5, 5, 5, 0.2), rgba(46, 42, 44, 0.2)), url('/images/slide2/image2.jpg')">
+      <div class="carousel-item carousel-item-mod active" style="background-image:linear-gradient(0deg, rgba(5, 5, 5, 0.2), rgba(46, 42, 44, 0.2)), url('/images/slide2/image2.jpg')">
         <div class="carousel-caption d-none d-md-block">
             {{-- <img src="/images/logo/logobg.png" alt="" width="400"> --}}
             <img class="text-focus-in" src="/images/logo/logobg.png" alt="" width="400">
@@ -29,7 +29,7 @@ Home | Catch A Vibes
       </div>
 
       <!-- Slide Three - Set the background image for this slide in the line below -->
-      <div class="carousel-item" style="background-image: linear-gradient(0deg, rgba(5, 5, 5, 0.2), rgba(46, 42, 44, 0.2)), url('/images/slide2/image3.jpg')">
+      <div class="carousel-item carousel-item-mod" style="background-image: linear-gradient(0deg, rgba(5, 5, 5, 0.2), rgba(46, 42, 44, 0.2)), url('/images/slide2/image3.jpg')">
         <div class="carousel-caption d-none d-md-block">
             {{-- <img src="/images/logo/logobg.png" alt="" width="400"> --}}
             <h2 class=" slidetxt text-focus-in ">Accomodation available</h2>
@@ -38,7 +38,7 @@ Home | Catch A Vibes
       </div>
 
           <!-- Slide Three - Set the background image for this slide in the line below -->
-      <div class="carousel-item" style="background-image: linear-gradient(0deg, rgba(5, 5, 5, 0.2), rgba(46, 42, 44, 0.2)), url('/images/slide2/image4.jpg')">
+      <div class="carousel-item carousel-item-mod" style="background-image: linear-gradient(0deg, rgba(5, 5, 5, 0.2), rgba(46, 42, 44, 0.2)), url('/images/slide2/image4.jpg')">
         <div class="carousel-caption d-none d-md-block">
             {{-- <img src="/images/logo/logobg.png" alt="" width="400"> --}}
             <h2 class=" slidetxt text-focus-in ">Get  50% off your next tour</h2>
@@ -47,7 +47,7 @@ Home | Catch A Vibes
       </div>
 
          <!-- Slide Three - Set the background image for this slide in the line below -->
-      <div class="carousel-item" style="background-image:linear-gradient(0deg, rgba(5, 5, 5, 0.2), rgba(46, 42, 44, 0.2)), url('/images/slide2/image1.jpg')">
+      <div class="carousel-item carousel-item-mod" style="background-image:linear-gradient(0deg, rgba(5, 5, 5, 0.2), rgba(46, 42, 44, 0.2)), url('/images/slide2/image1.jpg')">
         <div class="carousel-caption d-none d-md-block">
           <h2 class=" slidetxt text-focus-in">Tours in jamaica's north coast</h2>
             <p class="lead tracking-in-expand-fwd"><button type="button" class="btn btn-primary">Click to Learn More</button></p>
@@ -147,7 +147,155 @@ Home | Catch A Vibes
 </section>
 {{-- -------------------------------- End Company Introduction -------------------------------------------------------------- --}}
 
+{{-- --------------------------------------------- Locations-------------------------------------------------------- --}}
 
+
+
+<!--Carousel Wrapper-->
+<div id="multi-item-example" class="carousel slide carousel-multi-item services-section" data-ride="carousel">
+<h1 class="service-title-text container">Places that we Visit</h1>
+  <!--Controls-->
+  <div class="controls-top container">
+    <a class="btn-floating" href="#multi-item-example" data-slide="prev"><</i></a>
+    <a class="btn-floating" href="#multi-item-example" data-slide="next">></i></a>
+  </div>
+  <!--/.Controls-->
+
+  <!--Indicators-->
+  <ol class="carousel-indicators">
+    <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+    <li data-target="#multi-item-example" data-slide-to="1"></li>
+
+  </ol>
+  <!--/.Indicators-->
+
+  <!--Slides-->
+  <div class="carousel-inner" role="listbox">
+
+    <!--First slide-->
+    <div class="carousel-item active">
+
+      <div class="col-md-3" style="float:left">
+       <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <a class="btn btn-primary">Button</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3" style="float:left">
+        <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <a class="btn btn-primary">Button</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3" style="float:left">
+        <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <a class="btn btn-primary">Button</a>
+          </div>
+        </div>
+      </div>
+
+       <div class="col-md-3" style="float:left">
+       <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <a class="btn btn-primary">Button</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!--/.First slide-->
+
+    <!--Second slide-->
+    <div class="carousel-item">
+
+      <div class="col-md-3" style="float:left">
+        <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <a class="btn btn-primary">Button</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3" style="float:left">
+        <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(47).jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <a class="btn btn-primary">Button</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3" style="float:left">
+        <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <a class="btn btn-primary">Button</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3" style="float:left">
+        <div class="card mb-2">
+          <img class="card-img-top"
+            src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(47).jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+              card's content.</p>
+            <a class="btn btn-primary">Button</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!--/.Second slide-->
+
+
+
+  </div>
+  <!--/.Slides-->
+
+</div>
+<!--/.Carousel Wrapper-->
+{{-- ----------------------------------------------End Locations ------------------------------------------------ --}}
 
 {{-- -------------------------------- Destinations -------------------------------------------------------------- --}}
 
@@ -197,31 +345,19 @@ Home | Catch A Vibes
 {{-- -----------------------------------------Photo Gallery  ---------------------------------------------------------- --}}
 <div class="container">
 
+<p class="web-title1">Bolt Tour Image Gallery</p>
     <!-- Gallery -->
+<!-- Gallery -->
 <div class="row">
   <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
     <img
-      src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg"
+      src="images/gallery/img1.jpeg"
       class="w-100 shadow-1-strong rounded mb-4"
       alt=""
     />
 
     <img
-      src="https://mdbootstrap.com/img/Photos/Vertical/mountain1.jpg"
-      class="w-100 shadow-1-strong rounded mb-4"
-      alt=""
-    />
-  </div>
-
-  <div class="col-lg-4 mb-4 mb-lg-0">
-    <img
-      src="https://mdbootstrap.com/img/Photos/Vertical/mountain2.jpg"
-      class="w-100 shadow-1-strong rounded mb-4"
-      alt=""
-    />
-
-    <img
-      src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg"
+      src="images/gallery/img13.jpeg"
       class="w-100 shadow-1-strong rounded mb-4"
       alt=""
     />
@@ -229,18 +365,33 @@ Home | Catch A Vibes
 
   <div class="col-lg-4 mb-4 mb-lg-0">
     <img
-      src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
+      src="images/gallery/img9.jpeg"
       class="w-100 shadow-1-strong rounded mb-4"
       alt=""
     />
 
     <img
-      src="https://mdbootstrap.com/img/Photos/Vertical/mountain3.jpg"
+      src="images/gallery/img3.jpeg"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt=""
+    />
+  </div>
+
+  <div class="col-lg-4 mb-4 mb-lg-0">
+    <img
+      src="images/gallery/img4.jpeg"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt=""
+    />
+
+    <img
+      src="images/gallery/img5.jpeg"
       class="w-100 shadow-1-strong rounded mb-4"
       alt=""
     />
   </div>
 </div>
+<!-- Gallery -->
 <!-- Gallery -->
 
 </div>

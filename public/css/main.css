@@ -3,7 +3,7 @@ body
     /* font-family: 'Roboto', arial, helvetica, sans-serif; */
     font-family: 'Barlow', sans-serif;
 }
-.carousel-item {
+.carousel-item-mod{
   height: 100vh;
   min-height: 350px;
   background: no-repeat center center scroll;
