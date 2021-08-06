@@ -41,7 +41,7 @@ Home | Catch A Vibes
       <div class="carousel-item carousel-item-mod" style="background-image: linear-gradient(0deg, rgba(5, 5, 5, 0.2), rgba(46, 42, 44, 0.2)), url('/images/slide2/image4.jpg')">
         <div class="carousel-caption d-none d-md-block">
             {{-- <img src="/images/logo/logobg.png" alt="" width="400"> --}}
-            <h2 class=" slidetxt text-focus-in ">Get  50% off your next tour</h2>
+            <h2 class=" slidetxt text-focus-in ">Packages Starting At $180 USD</h2>
             <p class="lead tracking-in-expand-fwd"><button type="button" class="btn btn-primary">Click to Learn More</button></p>
         </div>
       </div>
@@ -178,12 +178,12 @@ Home | Catch A Vibes
       <div class="col-md-3" style="float:left">
        <div class="card mb-2">
           <img class="card-img-top"
-            src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
+            src="images/general/bobmarleymuseum.jpg" alt="Card image cap">
           <div class="card-body">
-            <h4 class="card-title">Card title</h4>
+            <h4 class="card-title">Bob Marley Museum</h4>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
               card's content.</p>
-            <a class="btn btn-primary">Button</a>
+            <a class="btn btn-primary">Book Tour Now</a>
           </div>
         </div>
       </div>
@@ -191,12 +191,12 @@ Home | Catch A Vibes
       <div class="col-md-3" style="float:left">
         <div class="card mb-2">
           <img class="card-img-top"
-            src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
+            src="images/general/dunnsriver.jpg" alt="Card image cap">
           <div class="card-body">
-            <h4 class="card-title">Card title</h4>
+            <h4 class="card-title">Dunns River Falls</h4>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
               card's content.</p>
-            <a class="btn btn-primary">Button</a>
+            <a class="btn btn-primary">Book Tour Now</a>
           </div>
         </div>
       </div>
@@ -204,12 +204,12 @@ Home | Catch A Vibes
       <div class="col-md-3" style="float:left">
         <div class="card mb-2">
           <img class="card-img-top"
-            src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
+            src="images/general/bostonjerkcenter.jpg" alt="Card image cap">
           <div class="card-body">
-            <h4 class="card-title">Card title</h4>
+            <h4 class="card-title">Boston Jerk Center</h4>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
               card's content.</p>
-            <a class="btn btn-primary">Button</a>
+            <a class="btn btn-primary">Book Tour Now</a>
           </div>
         </div>
       </div>
@@ -217,12 +217,12 @@ Home | Catch A Vibes
        <div class="col-md-3" style="float:left">
        <div class="card mb-2">
           <img class="card-img-top"
-            src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
+            src="images/general/puertoseco.jpg" height="232" alt="Card image cap">
           <div class="card-body">
-            <h4 class="card-title">Card title</h4>
+            <h4 class="card-title">Puerto Seco Beach</h4>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
               card's content.</p>
-            <a class="btn btn-primary">Button</a>
+            <a class="btn btn-primary">Book Tour Now</a>
           </div>
         </div>
       </div>
@@ -236,12 +236,12 @@ Home | Catch A Vibes
       <div class="col-md-3" style="float:left">
         <div class="card mb-2">
           <img class="card-img-top"
-            src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
+            src="images/general/portroyal.jpg" alt="Card image cap">
           <div class="card-body">
-            <h4 class="card-title">Card title</h4>
+            <h4 class="card-title">Port Royal</h4>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
               card's content.</p>
-            <a class="btn btn-primary">Button</a>
+            <a class="btn btn-primary">Book Tour Now</a>
           </div>
         </div>
       </div>
@@ -249,12 +249,12 @@ Home | Catch A Vibes
       <div class="col-md-3" style="float:left">
         <div class="card mb-2">
           <img class="card-img-top"
-            src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(47).jpg" alt="Card image cap">
+            src="images/general/hopegarden.jpg" alt="Card image cap">
           <div class="card-body">
-            <h4 class="card-title">Card title</h4>
+            <h4 class="card-title">Hope Botanical Garden</h4>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
               card's content.</p>
-            <a class="btn btn-primary">Button</a>
+            <a class="btn btn-primary">Book Tour Now</a>
           </div>
         </div>
       </div>
@@ -262,12 +262,12 @@ Home | Catch A Vibes
       <div class="col-md-3" style="float:left">
         <div class="card mb-2">
           <img class="card-img-top"
-            src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg" alt="Card image cap">
+            src="images/general/devonhouse.jpg" alt="Card image cap">
           <div class="card-body">
-            <h4 class="card-title">Card title</h4>
+            <h4 class="card-title">Devon House</h4>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
               card's content.</p>
-            <a class="btn btn-primary">Button</a>
+            <a class="btn btn-primary">Book Tour Now</a>
           </div>
         </div>
       </div>
@@ -275,12 +275,12 @@ Home | Catch A Vibes
       <div class="col-md-3" style="float:left">
         <div class="card mb-2">
           <img class="card-img-top"
-            src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(47).jpg" alt="Card image cap">
+            src="images/general/bluelagoon.jpg" height="232" alt="Card image cap">
           <div class="card-body">
-            <h4 class="card-title">Card title</h4>
+            <h4 class="card-title">Blue Lagoon</h4>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
               card's content.</p>
-            <a class="btn btn-primary">Button</a>
+            <a class="btn btn-primary">Book Tour Now</a>
           </div>
         </div>
       </div>
@@ -449,9 +449,10 @@ Home | Catch A Vibes
                     </div>
                     <div class="col-md-4">
                         <h4>Have Questions?</h4>
-                        <h4 class="text-color">+1-202-555-0173</h4>
-                        <h4><a href="#" class="text-color footerlink">support@traveler.com</a></h4>
-                        <p>24/7 Dedicated Customer Support</p>
+                        <h4 class="text-color">Local : <br> 876-669-6449 <br> 876-497-2186</h4>
+                        <h4 class="text-color">International : <br> +1-585-309-1745</h4>
+                        <h4><a href="#" class="text-color footerlink">bolttourscs@gmail.com</a></h4>
+                        <p>Dedicated Customer Support</p>
                     </div>
 
                 </div>
