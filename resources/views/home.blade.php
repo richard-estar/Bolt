@@ -153,12 +153,16 @@ Home | Catch A Vibes
 
 <!--Carousel Wrapper-->
 <div id="multi-item-example" class="carousel slide carousel-multi-item services-section" data-ride="carousel">
-<h1 class="service-title-text container">Places that we Visit</h1>
+<h1 class="service-title-text">Places that we Visit</h1>
   <!--Controls-->
-  <div class="controls-top container">
-    <a class="btn-floating" href="#multi-item-example" data-slide="prev"><</i></a>
-    <a class="btn-floating" href="#multi-item-example" data-slide="next">></i></a>
-  </div>
+  <a class="carousel-control-prev" href="#multi-item-example" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#multi-item-example" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
   <!--/.Controls-->
 
   <!--Indicators-->
@@ -178,7 +182,7 @@ Home | Catch A Vibes
       <div class="col-md-3" style="float:left">
        <div class="card mb-2">
           <img class="card-img-top"
-            src="images/general/bobmarleymuseum.jpg" alt="Card image cap">
+            src="images/general/bobmarleymuseum.jpg" height="232" alt="Card image cap">
           <div class="card-body">
             <h4 class="card-title">Bob Marley Museum</h4>
             <p class="card-text">Located in St Andrew</p>
@@ -190,7 +194,7 @@ Home | Catch A Vibes
       <div class="col-md-3" style="float:left">
         <div class="card mb-2">
           <img class="card-img-top"
-            src="images/general/dunnsriver.jpg" alt="Card image cap">
+            src="images/general/dunnsriver.jpg" height="232" alt="Card image cap">
           <div class="card-body">
             <h4 class="card-title">Dunns River Falls</h4>
             <p class="card-text">Located in Ocho Rios</p>
@@ -202,7 +206,7 @@ Home | Catch A Vibes
       <div class="col-md-3" style="float:left">
         <div class="card mb-2">
           <img class="card-img-top"
-            src="images/general/bostonjerkcenter.jpg" alt="Card image cap">
+            src="images/general/bostonjerkcenter.jpg" height="232" alt="Card image cap">
           <div class="card-body">
             <h4 class="card-title">Boston Jerk Center</h4>
             <p class="card-text">Portland</p>
@@ -232,7 +236,7 @@ Home | Catch A Vibes
       <div class="col-md-3" style="float:left">
         <div class="card mb-2">
           <img class="card-img-top"
-            src="images/general/portroyal.jpg" alt="Card image cap">
+            src="images/general/portroyal.jpg" height="232" alt="Card image cap">
           <div class="card-body">
             <h4 class="card-title">Port Royal</h4>
             <p class="card-text">Located in Kingston</p>
@@ -244,7 +248,7 @@ Home | Catch A Vibes
       <div class="col-md-3" style="float:left">
         <div class="card mb-2">
           <img class="card-img-top"
-            src="images/general/hopegarden.jpg" alt="Card image cap">
+            src="images/general/hopegarden.jpg" height="232" alt="Card image cap">
           <div class="card-body">
             <h4 class="card-title">Hope Botanical Garden</h4>
             <p class="card-text">Located in Kingston</p>
@@ -256,7 +260,7 @@ Home | Catch A Vibes
       <div class="col-md-3" style="float:left">
         <div class="card mb-2">
           <img class="card-img-top"
-            src="images/general/devonhouse.jpg" alt="Card image cap">
+            src="images/general/devonhouse.jpg" height="232" alt="Card image cap">
           <div class="card-body">
             <h4 class="card-title">Devon House</h4>
             <p class="card-text">Located in Kingston</p>
@@ -343,27 +347,13 @@ Home | Catch A Vibes
 <div class="row">
   <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
     <img
-      src="images/gallery/img1.jpeg"
+      src="images/gallery/img1.JPEG"
       class="w-100 shadow-1-strong rounded mb-4"
       alt=""
     />
 
     <img
-      src="images/gallery/img13.jpeg"
-      class="w-100 shadow-1-strong rounded mb-4"
-      alt=""
-    />
-  </div>
-
-  <div class="col-lg-4 mb-4 mb-lg-0">
-    <img
-      src="images/gallery/img9.jpeg"
-      class="w-100 shadow-1-strong rounded mb-4"
-      alt=""
-    />
-
-    <img
-      src="images/gallery/img3.jpeg"
+      src="images/gallery/img13.JPEG"
       class="w-100 shadow-1-strong rounded mb-4"
       alt=""
     />
@@ -371,13 +361,27 @@ Home | Catch A Vibes
 
   <div class="col-lg-4 mb-4 mb-lg-0">
     <img
-      src="images/gallery/img4.jpeg"
+      src="images/gallery/img9.JPEG"
       class="w-100 shadow-1-strong rounded mb-4"
       alt=""
     />
 
     <img
-      src="images/gallery/img5.jpeg"
+      src="images/gallery/img3.JPEG"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt=""
+    />
+  </div>
+
+  <div class="col-lg-4 mb-4 mb-lg-0">
+    <img
+      src="images/gallery/img4.JPEG"
+      class="w-100 shadow-1-strong rounded mb-4"
+      alt=""
+    />
+
+    <img
+      src="images/gallery/img5.JPEG"
       class="w-100 shadow-1-strong rounded mb-4"
       alt=""
     />
