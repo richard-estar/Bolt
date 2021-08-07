@@ -44,12 +44,12 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home
+          <a class="nav-link" href="/">Home
                 <span class="sr-only">(current)</span>
               </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Bookings</a>
+          <a class="nav-link" href="/booking">Bookings</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Services</a>
@@ -62,5 +62,66 @@
   </div>
 </nav>
     @yield('body')
+    {{-- -----------------------------------------footer ---------------------------------------------------------- --}}
+<footer id="main-footer">
+            <div class="container">
+                <div class="row row-wrap">
+                    <div class="col-md-3">
+                        <a class="logo" href="index.html">
+                            <img src="images/logo/logobg.png" alt="Logo Image" width="50%"/>
+                        </a>
+                        <p class="mb20">Booking, reviews and advices on hotels, resorts, flights, vacation rentals, travel packages, and lots more!</p>
+
+                        <a href="#" class="footerlink fa fa-facebook icons"></a>
+                        <a href="#" class="footerlink fa fa-twitter icons" ></a>
+                        <a href="#" class="footerlink fa fa-google icons" ></a>
+                        <a href="#" class="footerlink fa fa-linkedin icons" ></a>
+                        <a href="#" class="footerlink fa fa-youtube icons" ></a>
+                        <a href="#" class="footerlink fa fa-instagram icons" ></a>
+                        <a href="#" class="footerlink fa fa-pinterest icons" ></a>
+                    </div>
+
+                    <div class="col-md-3">
+                        <h4>Newsletter</h4>
+                        <form>
+                            <label>Enter your E-mail Address</label>
+                            <input type="text" class="form-control">
+                            <p class="mt5"><small>*We Never Send Spam</small>
+                            </p>
+                            <input type="submit" class="btn btn-primary" value="Subscribe">
+                        </form>
+                    </div>
+                    <div class="col-md-2">
+                        <ul class="list list-footer ">
+                            <li><a href="#" class="footerlink">About US</a>
+                            </li>
+                            <li><a href="#" class="footerlink">Press Centre</a>
+                            </li>
+                            <li><a href="#" class="footerlink">Best Price Guarantee</a>
+                            </li>
+                            <li><a href="#" class="footerlink">Travel News</a>
+                            </li>
+                            <li><a href="#" class="footerlink">Jobs</a>
+                            </li>
+                            <li><a href="#" class="footerlink">Privacy Policy</a>
+                            </li>
+                            <li><a href="#" class="footerlink">Terms of Use</a>
+                            </li>
+                            <li><a href="#" class="footerlink">Feedback</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h4>Have Questions?</h4>
+                        <h4 class="text-color">Local : <br> 876-669-6449 <br> 876-497-2186</h4>
+                        <h4 class="text-color">International : <br> +1-585-309-1745</h4>
+                        <h4><a href="#" class="text-color footerlink">bolttourscs@gmail.com</a></h4>
+                        <p>Dedicated Customer Support</p>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+        {{-- ----------------------------------------- end footer ---------------------------------------------------------- --}}
 </body>
 </html>
