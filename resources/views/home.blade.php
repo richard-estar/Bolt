@@ -181,8 +181,7 @@ Home | Catch A Vibes
             src="images/general/bobmarleymuseum.jpg" alt="Card image cap">
           <div class="card-body">
             <h4 class="card-title">Bob Marley Museum</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-              card's content.</p>
+            <p class="card-text">Located in St Andrew</p>
             <a class="btn btn-primary">Book Tour Now</a>
           </div>
         </div>
@@ -194,8 +193,7 @@ Home | Catch A Vibes
             src="images/general/dunnsriver.jpg" alt="Card image cap">
           <div class="card-body">
             <h4 class="card-title">Dunns River Falls</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-              card's content.</p>
+            <p class="card-text">Located in Ocho Rios</p>
             <a class="btn btn-primary">Book Tour Now</a>
           </div>
         </div>
@@ -207,8 +205,7 @@ Home | Catch A Vibes
             src="images/general/bostonjerkcenter.jpg" alt="Card image cap">
           <div class="card-body">
             <h4 class="card-title">Boston Jerk Center</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-              card's content.</p>
+            <p class="card-text">Portland</p>
             <a class="btn btn-primary">Book Tour Now</a>
           </div>
         </div>
@@ -220,8 +217,7 @@ Home | Catch A Vibes
             src="images/general/puertoseco.jpg" height="232" alt="Card image cap">
           <div class="card-body">
             <h4 class="card-title">Puerto Seco Beach</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-              card's content.</p>
+            <p class="card-text">Located in Ocho Rios</p>
             <a class="btn btn-primary">Book Tour Now</a>
           </div>
         </div>
@@ -239,8 +235,7 @@ Home | Catch A Vibes
             src="images/general/portroyal.jpg" alt="Card image cap">
           <div class="card-body">
             <h4 class="card-title">Port Royal</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-              card's content.</p>
+            <p class="card-text">Located in Kingston</p>
             <a class="btn btn-primary">Book Tour Now</a>
           </div>
         </div>
@@ -252,8 +247,7 @@ Home | Catch A Vibes
             src="images/general/hopegarden.jpg" alt="Card image cap">
           <div class="card-body">
             <h4 class="card-title">Hope Botanical Garden</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-              card's content.</p>
+            <p class="card-text">Located in Kingston</p>
             <a class="btn btn-primary">Book Tour Now</a>
           </div>
         </div>
@@ -265,8 +259,7 @@ Home | Catch A Vibes
             src="images/general/devonhouse.jpg" alt="Card image cap">
           <div class="card-body">
             <h4 class="card-title">Devon House</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-              card's content.</p>
+            <p class="card-text">Located in Kingston</p>
             <a class="btn btn-primary">Book Tour Now</a>
           </div>
         </div>
@@ -278,8 +271,7 @@ Home | Catch A Vibes
             src="images/general/bluelagoon.jpg" height="232" alt="Card image cap">
           <div class="card-body">
             <h4 class="card-title">Blue Lagoon</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-              card's content.</p>
+            <p class="card-text">Located in Portland</p>
             <a class="btn btn-primary">Book Tour Now</a>
           </div>
         </div>
