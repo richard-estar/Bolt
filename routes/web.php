@@ -18,3 +18,4 @@ Route::get('/', function () {
 });
 
 Route::get('/booking', [bookingController::class, 'index']);
+Route::post('/booking', [bookingController::class, 'book']);
