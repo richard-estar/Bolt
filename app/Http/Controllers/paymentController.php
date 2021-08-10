@@ -9,22 +9,20 @@ use net\authorize\api\controller as AnetController;
 
 class paymentController extends Controller
 {
-    public function processPayment($cc_num, $cc_exp_month, $cc_exp_year, $amount)
+    public function processPayment($cc_num, $cc_exp_month, $cc_exp_year, $amount, $cvc)
     {
-        /* Create a merchantAuthenticationType object with authentication details
-       retrieved from the constants file */
+
         $merchantAuthentication = new AnetAPI\MerchantAuthenticationType();
-        $merchantAuthentication->setName(env('MERCHANT_LOGIN_ID'));
-        $merchantAuthentication->setTransactionKey(env('MERCHANT_TRANSACTION_KEY'));
+        $merchantAuthentication->setName("7sRvK68h");
+        $merchantAuthentication->setTransactionKey("37442P5xj5TWyjZN");
 
         // Set the transaction's refId
         $refId = 'ref' . time();
-
         // Create the payment data for a credit card
         $creditCard = new AnetAPI\CreditCardType();
         $creditCard->setCardNumber($cc_num);
-        $creditCard->setExpirationDate($cc_exp_year . "-" . $cc_exp_month);
-        $creditCard->setCardCode("123");
+        $creditCard->setExpirationDate("$cc_exp_year-$cc_exp_month");
+        $creditCard->setCardCode($cvc);
 
         // Add the payment data to a paymentType object
         $paymentOne = new AnetAPI\PaymentType();
@@ -99,6 +97,8 @@ class paymentController extends Controller
 
                 if ($tresponse != null && $tresponse->getMessages() != null) {
                     echo " Successfully created transaction with Transaction ID: " . $tresponse->getTransId() . "\n";
+                    $transactionId = $tresponse->getTransId();
+                    return $transactionId;
                     echo " Transaction Response Code: " . $tresponse->getResponseCode() . "\n";
                     echo " Message Code: " . $tresponse->getMessages()[0]->getCode() . "\n";
                     echo " Auth Code: " . $tresponse->getAuthCode() . "\n";
@@ -108,6 +108,8 @@ class paymentController extends Controller
                     if ($tresponse->getErrors() != null) {
                         echo " Error Code  : " . $tresponse->getErrors()[0]->getErrorCode() . "\n";
                         echo " Error Message : " . $tresponse->getErrors()[0]->getErrorText() . "\n";
+                        $error = $tresponse->getErrors()[0]->getErrorText();
+                        return $error;
                     }
                 }
                 // Or, print errors if the API request wasn't successful
@@ -127,6 +129,6 @@ class paymentController extends Controller
             echo  "No response returned \n";
         }
 
-        return $response;
+        //return $response;
     }
 }

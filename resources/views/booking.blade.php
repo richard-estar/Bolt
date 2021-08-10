@@ -5,7 +5,7 @@
 @endsection
 
 
-@section('body')
+@section('body')s
 
     <div class="container">
         <h1 class="web-title1">Book Your Next Adventure</h1>
@@ -16,6 +16,7 @@
 
 <!-- Text input-->
 <form method="POST" action="/booking">
+<h1>Booking Information</h1>
 <div class="form-group">
   <label class="col-md-4 control-label" for="textinput">First Name</label>
   <div class="col-md-5">
@@ -111,11 +112,12 @@
 </div>
 </div>
 
+<h1>Payment Information</h1>
 <!-- Text input-->
 <div class="form-group">
   <label class="col-md-4 control-label" for="cc_num">Credit/Debit Card number</label>
   <div class="col-md-5">
-  <input id="cc_num" name="cc_num" type="text" placeholder="0000 0000 0000 0000" class="form-control input-md" required="">
+  <input id="cc_num" name="cc_num" type="text" placeholder="0000 0000 0000 0000" class="form-control input-md" required="" maxlength="16">
 
   </div>
 </div>
@@ -125,18 +127,18 @@
   <label class="col-md-4 control-label" for="month">Exp month</label>
   <div class="col-md-2">
     <select id="month" name="month" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="">3</option>
-      <option value="">4</option>
-      <option value="">5</option>
-      <option value="">6</option>
-      <option value="">7</option>
-      <option value="">8</option>
-      <option value="">9</option>
-      <option value="">10</option>
-      <option value="">11</option>
-      <option value="">12</option>
+      <option value="01">01</option>
+      <option value="02">02</option>
+      <option value="03">03</option>
+      <option value="04">04</option>
+      <option value="05">05</option>
+      <option value="06">06</option>
+      <option value="07">07</option>
+      <option value="08">08</option>
+      <option value="09">09</option>
+      <option value="10">10</option>
+      <option value="11">11</option>
+      <option value="12">12</option>
     </select>
   </div>
 </div>
@@ -146,32 +148,32 @@
   <label class="col-md-4 control-label" for="year">Exp year</label>
   <div class="col-md-2">
     <select id="year" name="year" class="form-control">
-      <option value="1">2021</option>
-      <option value="2">2022</option>
-      <option value="">2023</option>
-      <option value="">2024</option>
-      <option value="">2025</option>
-      <option value="">2026</option>
-      <option value="">2027</option>
-      <option value="">2028</option>
-      <option value="">2029</option>
-      <option value="">2030</option>
-      <option value="">2031</option>
+      <option value="2021">2021</option>
+      <option value="2022">2022</option>
+      <option value="2023">2023</option>
+      <option value="2024">2024</option>
+      <option value="2025">2025</option>
+      <option value="2026">2026</option>
+      <option value="2027">2027</option>
+      <option value="2028">2028</option>
+      <option value="2029">2029</option>
+      <option value="2030">2030</option>
+      <option value="2031">2031</option>
     </select>
   </div>
 </div>
 
-{{-- <!-- Text input-->
+<!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="lname">CVC (Three digit code on back)</label>
-  <div class="col-md-5">
-  <input id="cvc" name="cvc" type="text" placeholder="Last name" class="form-control input-md" required="">
+  <label class="col-md-4 control-label" for="cvc">CVC (Three digit code on back)</label>
+  <div class="col-md-2">
+  <input id="cvc" name="cvc" type="text" placeholder="" class="form-control input-md" required="" maxlength="3">
 
   </div>
-</div> --}}
+</div>
 
 <!-- Button -->
-<input type="hidden" value="$180">
+<input type="hidden" value="180" name="amount">
 <div class="form-group">
   <label class="col-md-4 control-label" for="submit"></label>
   <div class="col-md-4">
