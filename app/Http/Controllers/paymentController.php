@@ -96,13 +96,13 @@ class paymentController extends Controller
                 $tresponse = $response->getTransactionResponse();
 
                 if ($tresponse != null && $tresponse->getMessages() != null) {
-                    echo " Successfully created transaction with Transaction ID: " . $tresponse->getTransId() . "\n";
+                    //echo " Successfully created transaction with Transaction ID: " . $tresponse->getTransId() . "\n";
                     $transactionId = $tresponse->getTransId();
                     return $transactionId;
-                    echo " Transaction Response Code: " . $tresponse->getResponseCode() . "\n";
-                    echo " Message Code: " . $tresponse->getMessages()[0]->getCode() . "\n";
-                    echo " Auth Code: " . $tresponse->getAuthCode() . "\n";
-                    echo " Description: " . $tresponse->getMessages()[0]->getDescription() . "\n";
+                    //echo " Transaction Response Code: " . $tresponse->getResponseCode() . "\n";
+                    //echo " Message Code: " . $tresponse->getMessages()[0]->getCode() . "\n";
+                    //echo " Auth Code: " . $tresponse->getAuthCode() . "\n";
+                    //echo " Description: " . $tresponse->getMessages()[0]->getDescription() . "\n";
                 } else {
                     echo "Transaction Failed \n";
                     if ($tresponse->getErrors() != null) {

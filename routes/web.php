@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\bookingController;
+
+use function Ramsey\Uuid\v6;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,4 +21,7 @@ Route::get('/', function () {
 });
 
 Route::get('/booking', [bookingController::class, 'index']);
+Route::get('/contact', function () {
+    return view('contact');
+});
 Route::post('/booking', [bookingController::class, 'book']);

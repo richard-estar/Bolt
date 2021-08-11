@@ -58,31 +58,31 @@
   <div class="col-md-4">
   <div class="checkbox">
     <label for="destinations-0">
-      <input type="checkbox" name="destinations" id="destinations-0" value="1">
+      <input type="checkbox" name="destinations[]" id="destinations-0" value="kingston">
       Kingston $180
     </label>
 	</div>
   <div class="checkbox">
     <label for="destinations-1">
-      <input type="checkbox" name="destinations" id="destinations-1" value="2">
+      <input type="checkbox" name="destinations[]" id="destinations-1" value="portland">
       Portland $200
     </label>
 	</div>
   <div class="checkbox">
     <label for="destinations-2">
-      <input type="checkbox" name="destinations" id="destinations-2" value="3">
+      <input type="checkbox" name="destinations[]" id="destinations-2" value="negril">
       Negril $280
     </label>
 	</div>
   <div class="checkbox">
     <label for="destinations-3">
-      <input type="checkbox" name="destinations" id="destinations-3" value="4">
+      <input type="checkbox" name="destinations[]" id="destinations-3" value="ocho rios">
       Ocho Rios $240
     </label>
 	</div>
   <div class="checkbox">
     <label for="destinations-4">
-      <input type="checkbox" name="destinations" id="destinations-4" value="5">
+      <input type="checkbox" name="destinations[]" id="destinations-4" value="montego bay">
       Montego Bay $260
     </label>
 	</div>
