@@ -20,7 +20,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="textinput">First Name</label>
   <div class="col-md-5">
-  <input id="textinput" name="textinput" type="text" placeholder="First name" class="form-control input-md" required="">
+  <input id="textinput" name="fname" type="text" placeholder="First name" class="form-control input-md" required="">
 
   </div>
 </div>
@@ -97,10 +97,10 @@
     <select id="tickets" name="tickets" class="form-control">
       <option value="1">1</option>
       <option value="2">2</option>
-      <option value="">3</option>
-      <option value="">4</option>
-      <option value="">5</option>
-      <option value="">6</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
     </select>
   </div>
 </div>

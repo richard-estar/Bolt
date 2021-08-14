@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use phpDocumentor\Reflection\Types\Nullable;
 
 class CreateBookingTable extends Migration
 {
@@ -16,18 +17,18 @@ class CreateBookingTable extends Migration
         Schema::create('booking', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string("fname", 50);
-            $table->string("lname", 50);
-            $table->string("email", 255);
-            $table->string("phone", 50);
-            $table->string("destination", 255);
-            $table->integer("guests");
-            $table->date("date");
+            $table->string("fname", 50)->nullable();
+            $table->string("lname", 50)->nullable();
+            $table->string("email", 255)->nullable();
+            $table->string("phone", 50)->nullable();
+            $table->string("destination", 255)->nullable();
+            $table->integer("guests")->nullable();
+            $table->date("date")->nullable();
             // $table->float("subtotal", 2);
             // $table->float("tax", 2);
-            $table->float("total", 2);
-            $table->string("lastfour", 4);
-            $table->string("transactionId");
+            $table->float("total")->nullable();
+            $table->string("lastfour")->nullable();
+            $table->string("transactionId")->nullable();
         });
     }
 

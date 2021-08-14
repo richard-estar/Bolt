@@ -15,27 +15,45 @@ class bookingController extends Controller
 
     public function book(Request $request, booking $booking)
     {
-        $fname = $request->fname;
-        $lname = $request->lname;
-        $email = $request->email;
-        $phone = $request->phone;
-        //$destination = $request->destinations;
-        $destination = "1,2,3";
-        $guests = $request->tickets;
-        $date = $request->date;
+        //Credit card post variable retrieved
         $cc_num = $request->cc_num;
         $cc_exp_month = $request->month;
         $cc_exp_year = $request->year;
         $amount = $request->amount;
         $cvc = $request->cvc;
 
-
+        //Create object of payment controller
         $payment = new paymentController();
+
+        //Pass credit card details into payment function sent to Authorize.net
         $attempt = $payment->processPayment($cc_num, $cc_exp_month, $cc_exp_year, $amount, $cvc);
+
+        //Check if charge was successful and store variables if so
         if (!empty($attempt)) {
-            echo "Charge successful";
-            $booking->save([$fname, $lname, $email, $phone, $destination, $guests, $date, $amount, '1111', $attempt]);
+            $booking->lname = $request->lname;
+            $booking->email = $request->email;
+            $booking->phone = $request->phone;
+            $booking->fname = $request->fname;
+            $booking->destination = implode(",", $request->destinations);
+            $booking->guests = $request->tickets;
+            $booking->date = $request->date;
+            $booking->total = $amount;
+            $booking->lastfour = substr($request->cc_num, -4);
+            $booking->transactionId = $attempt;
+            $booking->save();
+            echo '
+            <script type="text/javascript">
+    // Callback
+    window.onbeforeunload = function(e) {
+        // Turning off the event
+        e.preventDefault();
+    }
+</script>
+            ';
+
+            return view('result', ["result" => true, "destinations" => $booking->destination, "guests" => $booking->guests, "transactionId" => $attempt, "total" => $booking->total, "date" => $booking->date]);
         } else {
+            //advise customer not successful and return to payment page
             echo "charge not succesful";
         }
     }
