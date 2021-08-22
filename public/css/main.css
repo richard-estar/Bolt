@@ -213,3 +213,9 @@ footer#main-footer {
     font-size:25px;
     padding:0 5px
 }
+
+.check
+{
+    width: 600px;
+    text-align: left;
+}

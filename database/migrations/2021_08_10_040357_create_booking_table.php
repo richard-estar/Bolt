@@ -22,13 +22,13 @@ class CreateBookingTable extends Migration
             $table->string("email", 255)->nullable();
             $table->string("phone", 50)->nullable();
             $table->string("destination", 255)->nullable();
-            $table->integer("guests")->nullable();
+            $table->integer("adults")->nullable();
+            $table->integer("children")->nullable();
             $table->date("date")->nullable();
-            // $table->float("subtotal", 2);
-            // $table->float("tax", 2);
             $table->float("total")->nullable();
             $table->string("lastfour")->nullable();
             $table->string("transactionId")->nullable();
+            $table->string("status")->default("pending");
         });
     }
 

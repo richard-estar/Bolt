@@ -76,7 +76,8 @@ Home | Catch A Vibes
 {{-- ----------------------------------------------- BOOKING SECTION ---------------------------------------- --}}
 <div class="booking ">
     <div class="booking-form container">
-<form>
+<form method="POST" action="/stepone">
+    @csrf
 <div class="row no-margin">
 <div class="col-md-3">
 <div class="form-header">
@@ -88,7 +89,7 @@ Home | Catch A Vibes
 <div class="col-md-4">
 <div class="form-group">
 <span class="form-label">Destination</span>
-<select class="form-control">
+<select class="form-control" name="destination">
 <option>Kingston</option>
 <option>Portland</option>
 <option>Montego Bay</option>
@@ -106,13 +107,31 @@ Home | Catch A Vibes
 </div>
 </div>
 
-<div class="col-md-4">
+<div class="col-md-2">
 <div class="form-group">
-<span class="form-label">Guests</span>
-<select class="form-control">
+<span class="form-label">Adults</span>
+<select class="form-control" name="adults">
 <option>1</option>
 <option>2</option>
 <option>3</option>
+<option>4</option>
+<option>5</option>
+<option>6</option>
+</select>
+<span class="select-arrow"></span>
+</div>
+</div>
+
+<div class="col-md-2">
+<div class="form-group">
+<span class="form-label">Children</span>
+<select class="form-control" name="children">
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+<option>6</option>
 </select>
 <span class="select-arrow"></span>
 </div>
@@ -186,7 +205,7 @@ Home | Catch A Vibes
           <div class="card-body">
             <h4 class="card-title">Bob Marley Museum</h4>
             <p class="card-text">Located in St Andrew</p>
-            <a class="btn btn-primary">Book Tour Now</a>
+            <a class="btn btn-primary" href="/booking">Book Tour Now</a>
           </div>
         </div>
       </div>
@@ -198,7 +217,7 @@ Home | Catch A Vibes
           <div class="card-body">
             <h4 class="card-title">Dunns River Falls</h4>
             <p class="card-text">Located in Ocho Rios</p>
-            <a class="btn btn-primary">Book Tour Now</a>
+            <a class="btn btn-primary" href="/booking">Book Tour Now</a>
           </div>
         </div>
       </div>
@@ -210,7 +229,7 @@ Home | Catch A Vibes
           <div class="card-body">
             <h4 class="card-title">Boston Jerk Center</h4>
             <p class="card-text">Portland</p>
-            <a class="btn btn-primary">Book Tour Now</a>
+            <a class="btn btn-primary" href="/booking">Book Tour Now</a>
           </div>
         </div>
       </div>
@@ -222,7 +241,7 @@ Home | Catch A Vibes
           <div class="card-body">
             <h4 class="card-title">Puerto Seco Beach</h4>
             <p class="card-text">Located in Ocho Rios</p>
-            <a class="btn btn-primary">Book Tour Now</a>
+            <a class="btn btn-primary" href="/booking">Book Tour Now</a>
           </div>
         </div>
       </div>
@@ -240,7 +259,7 @@ Home | Catch A Vibes
           <div class="card-body">
             <h4 class="card-title">Port Royal</h4>
             <p class="card-text">Located in Kingston</p>
-            <a class="btn btn-primary">Book Tour Now</a>
+            <a class="btn btn-primary" href="/booking">Book Tour Now</a>
           </div>
         </div>
       </div>
@@ -252,7 +271,7 @@ Home | Catch A Vibes
           <div class="card-body">
             <h4 class="card-title">Hope Botanical Garden</h4>
             <p class="card-text">Located in Kingston</p>
-            <a class="btn btn-primary">Book Tour Now</a>
+            <a class="btn btn-primary" href="/booking">Book Tour Now</a>
           </div>
         </div>
       </div>
@@ -264,7 +283,7 @@ Home | Catch A Vibes
           <div class="card-body">
             <h4 class="card-title">Devon House</h4>
             <p class="card-text">Located in Kingston</p>
-            <a class="btn btn-primary">Book Tour Now</a>
+            <a class="btn btn-primary" href="/booking">Book Tour Now</a>
           </div>
         </div>
       </div>
@@ -276,7 +295,7 @@ Home | Catch A Vibes
           <div class="card-body">
             <h4 class="card-title">Blue Lagoon</h4>
             <p class="card-text">Located in Portland</p>
-            <a class="btn btn-primary">Book Tour Now</a>
+            <a class="btn btn-primary" href="/booking">Book Tour Now</a>
           </div>
         </div>
       </div>

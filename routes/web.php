@@ -20,8 +20,11 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/booking', [bookingController::class, 'index']);
 Route::get('/contact', function () {
     return view('contact');
 });
+
+Route::get('/booking', [bookingController::class, 'index']);
+Route::post('/stepone', [bookingController::class, 'stepone']);
 Route::post('/booking', [bookingController::class, 'book']);
+Route::post('/booking_cash', [bookingController::class, 'cash']);

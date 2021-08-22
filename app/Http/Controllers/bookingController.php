@@ -13,6 +13,7 @@ class bookingController extends Controller
         return view('booking');
     }
 
+
     public function book(Request $request, booking $booking)
     {
         //Credit card post variable retrieved
@@ -35,26 +36,56 @@ class bookingController extends Controller
             $booking->phone = $request->phone;
             $booking->fname = $request->fname;
             $booking->destination = implode(",", $request->destinations);
-            $booking->guests = $request->tickets;
+            $booking->adults = $request->adults;
+            $booking->children = $request->children;
             $booking->date = $request->date;
             $booking->total = $amount;
             $booking->lastfour = substr($request->cc_num, -4);
             $booking->transactionId = $attempt;
             $booking->save();
-            echo '
-            <script type="text/javascript">
-    // Callback
-    window.onbeforeunload = function(e) {
-        // Turning off the event
-        e.preventDefault();
-    }
-</script>
-            ';
 
-            return view('result', ["result" => true, "destinations" => $booking->destination, "guests" => $booking->guests, "transactionId" => $attempt, "total" => $booking->total, "date" => $booking->date]);
+            return view('result', ["result" => 1, "destinations" => $booking->destination, "guests" => $booking->guests, "transactionId" => $attempt, "total" => $booking->total, "date" => $booking->date]);
+        } else {
+
+            return view('result', ["result" => 3]);
+        }
+    }
+
+    public function stepone(Request $request)
+    {
+        $destination = $request->destination;
+        $date = $request->date;
+        $adults = $request->adults;
+        $children = $request->children;
+
+        return view('booking', ['destination' => $destination, 'date' => $date, 'adults' => $adults, 'children' => $children]);
+    }
+
+    public function cash(Request $request, booking $booking)
+    {
+
+        $amount = $request->amount;
+        $id = sprintf("%06d", mt_rand(1, 999999));
+        //Check if charge was successful and store variables if so
+        if (!empty($request)) {
+            $booking->lname = $request->lname;
+            $booking->email = $request->email;
+            $booking->phone = $request->phone;
+            $booking->fname = $request->fname;
+            $booking->destination = implode(",", $request->destinations);
+            $booking->adults = $request->adults;
+            $booking->children = $request->children;
+            $booking->date = $request->date;
+            $booking->total = $amount;
+            $booking->lastfour = substr($request->cc_num, -4);
+            $booking->transactionId = $id;
+            $booking->status = "not paid";
+            $booking->save();
+
+            return view('result', ["result" => 2, "destinations" => $booking->destination, "guests" => $booking->guests, "transactionId" => $id, "total" => $booking->total, "date" => $booking->date]);
         } else {
             //advise customer not successful and return to payment page
-            echo "charge not succesful";
+            return redirect('booking');
         }
     }
 }
