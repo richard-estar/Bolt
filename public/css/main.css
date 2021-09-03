@@ -219,3 +219,55 @@ footer#main-footer {
     width: 600px;
     text-align: left;
 }
+
+.formheader
+{
+    background-color: #E79F09;
+    color:#fff;
+    padding: 10px;
+    font-weight: bolder;
+}
+
+.booking_title
+{
+    font-size: 60px;
+    padding: 50px;
+}
+
+.control-label
+{
+    font-weight: bold;
+}
+
+.paybtn
+{
+    width: 500px;
+}
+
+.totals
+{
+    padding-top: 15px;
+    padding-bottom: 50px;
+    font-size: 25px;
+}
+
+.paycol
+{
+    text-align: left;
+    padding: 0%;
+}
+
+.ccnum
+{
+    padding-bottom:25px ;
+}
+
+.ccexp
+{
+    padding-bottom:25px ;
+}
+
+.pcheck
+{
+    padding-bottom:14px ;
+}

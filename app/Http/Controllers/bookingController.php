@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\paymentController;
 use App\Models\booking;
+// use Bugsnag\BugsnagLaravel\Facades\Bugsnag;
+// use RuntimeException;
 
 class bookingController extends Controller
 {
@@ -59,6 +61,10 @@ class bookingController extends Controller
         $children = $request->children;
 
         return view('booking', ['destination' => $destination, 'date' => $date, 'adults' => $adults, 'children' => $children]);
+    }
+
+    public function calculate($adults, $children, $destinations)
+    {
     }
 
     public function cash(Request $request, booking $booking)

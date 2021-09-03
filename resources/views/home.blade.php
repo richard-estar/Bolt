@@ -334,19 +334,19 @@ Home | Catch A Vibes
         <div class="col">
             <ul class="list-display list-checkmarks">
                 <li>Shuttle From Hotel to Tour Meetup</li>
-                <li>Shuttle From Hotel to Tour Meetup</li>
-                <li>Shuttle From Hotel to Tour Meetup</li>
-                <li>Shuttle From Hotel to Tour Meetup</li>
+                <li>Airport Transfers</li>
+                <li>Cruise Ship Pick up</li>
+                <li>Hotel Transfers</li>
 
             </ul>
         </div>
 
         <div class="col">
             <ul class="list-display list-checkmarks">
-                <li>Shuttle From Hotel to Tour Meetup</li>
-                <li>Shuttle From Hotel to Tour Meetup</li>
-                <li>Shuttle From Hotel to Tour Meetup</li>
-                <li>Shuttle From Hotel to Tour Meetup</li>
+                <li>Onsite Cash Payments</li>
+                <li>Friendly Chapperone</li>
+                <li>Scenic Routes</li>
+                <li>Location Narration</li>
 
             </ul>
         </div>

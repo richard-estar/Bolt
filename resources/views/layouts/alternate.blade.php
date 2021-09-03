@@ -31,13 +31,14 @@
 
 <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/animations.css">
-
+<script src="/js/toggle.js"></script>
+<script src="/js/price.js"></script>
 </head>
 <body>
     <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
-    <a class="navbar-brand" href="#"><img src="/images/logo/logosm.png" alt="logo" width="250px"></a>
+    <a class="navbar-brand" href="/"><img src="/images/logo/logosm.png" alt="logo" width="250px"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>

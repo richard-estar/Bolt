@@ -7,7 +7,7 @@
 
 @section('body')
     <div class="container">
-        <h1 class="web-title1">Book Your Next Adventure</h1>
+        <h1 class="booking_title">Book Your Next Adventure</h1>
        <fieldset>
 
 <!-- Text input-->
@@ -16,28 +16,26 @@
     <div class="row">
         {{-- This is the booking section of the form  --}}
         <div class="col">
-                <h1>Booking Information</h1>
+                <h1 class="formheader">Booking Information</h1>
 <div class="form-group">
   <label class="col-md-4 control-label" for="textinput">First Name</label>
-  <div class="col-md-5">
+  <div class="col-md-10">
   <input id="textinput" name="fname" type="text" placeholder="First name" class="form-control input-md" required="">
-
   </div>
 </div>
 
 <!-- Text input-->
 <div class="form-group">
   <label class="col-md-4 control-label" for="lname">Last name</label>
-  <div class="col-md-5">
+  <div class="col-md-10">
   <input id="lname" name="lname" type="text" placeholder="Last name" class="form-control input-md" required="">
-
   </div>
 </div>
 
 <!-- Text input-->
 <div class="form-group">
   <label class="col-md-4 control-label" for="phone">Phone</label>
-  <div class="col-md-5">
+  <div class="col-md-10">
   <input id="phone" name="phone" type="phone" placeholder="000-000-0000" class="form-control input-md" required="">
 
   </div>
@@ -46,7 +44,7 @@
 <!-- Text input-->
 <div class="form-group">
   <label class="col-md-4 control-label" for="email">Email</label>
-  <div class="col-md-5">
+  <div class="col-md-10">
   <input id="email" name="email" type="text" placeholder="email@email.com" class="form-control input-md" required="">
 
   </div>
@@ -89,11 +87,12 @@
   </div>
 </div>
 
-<!-- Select Basic -->
-<div class="form-group">
+<div class="row">
+    <!-- Select Basic -->
+<div class="form-group col">
   <label class="col-md-4 control-label" for="tickets">Adult </label>
 
-  <div class="col-md-2">
+  <div class="col-md-10">
     <select id="tickets" name="adults" class="form-control">
       <option value="1">1</option>
       <option value="2">2</option>
@@ -106,10 +105,10 @@
 </div>
 
 <!-- Select Basic -->
-<div class="form-group">
+<div class="form-group col">
   <label class="col-md-4 control-label" for="tickets">Children</label>
 
-  <div class="col-md-2">
+  <div class="col-md-10">
     <select id="tickets" name="children" class="form-control">
       <option value="1">1</option>
       <option value="2">2</option>
@@ -124,30 +123,53 @@
 <!--- Date ---------->
 <div class="col-md-4">
 <div class="form-group">
-<span class="form-label">Tour Date</span>
-<input class="form-control" type="date" name="date">
+<span class="form-label control-label">Tour Date</span>
+<input class="form-control" type="date" name="date" min="{{date("Y-m-d")}}" @if (isset($date))
+  value="{{$date}}"
+@endif>
 </div>
 </div>
+</div>
+
 </div>{{--   !!!!! this is the closing div for the booking section --}}
 
         {{-- This is the payment section of the form  --}}
-        <div class="col">
-            <h1>Payment Information</h1>
+        <div class="col paycol">
+            <h1 class="formheader">Payment Information</h1>
 <div id="payment">
+
+    <div class="totals">
+        <div class="row">
+            <div class="col" id="adult">Adult x 4</div>
+            <div class="col" id="adult_total">$350</div>
+        </div>
+
+        <div class="row">
+            <div class="col" id="adult">Children x 4</div>
+            <div class="col" id="adult_total">$350</div>
+        </div>
+
+        <div class="row">
+            <div class="col" id="adult"><b>Total</b></div>
+            <div class="col" id="adult_total">$350</div>
+        </div>
+    </div>
+
+
 <!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="cc_num">Credit/Debit Card number</label>
-  <div class="col-md-8">
+<div class="form-group ccnum">
+  <label class="col-md-10 control-label" for="cc_num">Credit/Debit Card number</label>
+  <div class="col-md-12">
   <input id="cc_num" name="cc_num" type="text" placeholder="0000 0000 0000 0000" class="form-control input-md" required="" maxlength="16" required>
 
   </div>
 </div>
 
-<div class="row">
+<div class="row ccexp">
  <!-- Select Basic -->
 <div class="form-group col">
-  <label class="col-md-6 control-label" for="month">Exp month</label>
-  <div class="col-md-6">
+  <label class="col-md-10 control-label" for="month">Exp month</label>
+  <div class="col-md-10">
     <select id="month" name="month" class="form-control" required>
       <option value="01">01</option>
       <option value="02">02</option>
@@ -167,8 +189,8 @@
 
 <!-- Select Basic -->
 <div class="form-group col">
-  <label class="col-md-6 control-label" for="year">Exp year</label>
-  <div class="col-md-6">
+  <label class="col-md-10 control-label" for="year">Exp year</label>
+  <div class="col-md-10">
     <select id="year" name="year" class="form-control" required>
       <option value="2021">2021</option>
       <option value="2022">2022</option>
@@ -185,24 +207,26 @@
   </div>
 </div>
 
-</div>
 
 <!-- Text input-->
-<div class="form-group">
-  <label class="col-md-12 control-label" for="cvc">CVC (Three digit code on back)</label>
-  <div class="col-md-4">
+<div class="form-group col">
+  <label class="col-md-10 control-label" for="cvc">CVC</label>
+  <div class="col-md-10">
   <input id="cvc" name="cvc" type="text" placeholder="" class="form-control input-md" required="" maxlength="3">
 
   </div>
 </div>
 </div>
+</div>
+
+
 
 <!-- Conditional Requirement -->
-<div class="checkbox">
+<div class="checkbox pcheck">
     <label for="destinations-1">
       <input type="checkbox" id="cash" onclick="toggle()">
-      Pay with with cash <br>
-      <h6>By paying with cash I agree to advise my tour guide 30 minutes ahead of time that I need to complete payment</h6>
+     <b>Pay with with cash</b>  <br><br>
+      <h3>By paying with cash I agree to advise my tour guide 30 minutes ahead of time that I need to complete payment</h3>
     </label>
 	</div>
 <!-- Button -->
@@ -210,11 +234,11 @@
 <div class="form-group">
   {{-- <label class="col-md-4 control-label" for="submit"></label> --}}
   <div class="col-md-4">
-    <button id="submit_card" formaction="/booking" name="submit" class="btn btn-primary">CONTINUE WITH PAYMENT </button>
+    <button id="submit_card" formaction="/booking" name="submit" class="btn btn-primary paybtn">CONTINUE WITH PAYMENT </button>
   </div>
 
   <div class="col-md-4">
-    <button id="submit_cash" formaction="/booking_cash" name="submit" class="btn btn-primary" style="display:none" >CONTINUE WITH BOOKING </button>
+    <button id="submit_cash" formaction="/booking_cash" name="submit" class="btn btn-primary paybtn" style="display:none" >CONTINUE WITH BOOKING </button>
   </div>
 </div>
         </div> {{--   !!!!! this is the closing div for the payment section --}}
@@ -225,7 +249,7 @@
 </form>
 
     </div>
-     <script>
+     {{-- <script>
          //function that toggles visibilty of payment section and buttons
         function toggle() {
 
@@ -260,8 +284,8 @@
         } else {
              payment.style.display = "block";
              payment_card.style.display = "block";
-            payment_cash.style.display = "none";
+             payment_cash.style.display = "none";
         }
         }
-    </script>
+    </script> --}}
 @endsection
