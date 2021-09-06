@@ -93,13 +93,13 @@
   <label class="col-md-4 control-label" for="tickets">Adult </label>
 
   <div class="col-md-10">
-    <select id="tickets" name="adults" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-      <option value="6">6</option>
+    <select id="adult_tickets" name="adults" class="form-control">
+      <option value="1"  @if(isset($adults) && $adults == "1")selected @endif>1</option>
+      <option value="2" @if(isset($adults) && $adults == "2")selected @endif>2</option>
+      <option value="3" @if(isset($adults) && $adults == "3")selected @endif>3</option>
+      <option value="4" @if(isset($adults) && $adults == "4")selected @endif>4</option>
+      <option value="5" @if(isset($adults) && $adults == "5")selected @endif>5</option>
+      <option value="6" @if(isset($adults) && $adults == "6")selected @endif>6</option>
     </select>
   </div>
 </div>
@@ -109,13 +109,13 @@
   <label class="col-md-4 control-label" for="tickets">Children</label>
 
   <div class="col-md-10">
-    <select id="tickets" name="children" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-      <option value="6">6</option>
+    <select id="children_tickets" name="children" class="form-control">
+      <option value="1"  @if(isset($children) && $children == "1")selected @endif>1</option>
+      <option value="2" @if(isset($children) && $children == "2")selected @endif>2</option>
+      <option value="3" @if(isset($children) && $children == "3")selected @endif>3</option>
+      <option value="4" @if(isset($children) && $children == "4")selected @endif>4</option>
+      <option value="5" @if(isset($children) && $children == "5")selected @endif>5</option>
+      <option value="6" @if(isset($children) && $children == "6")selected @endif>6</option>
     </select>
   </div>
 </div>
@@ -140,18 +140,20 @@
 
     <div class="totals">
         <div class="row">
-            <div class="col" id="adult">Adult x 4</div>
-            <div class="col" id="adult_total">$350</div>
+            <div class="col" id="adult_text">
+
+            </div>
+            <div class="col" id="adult_total"></div>
         </div>
 
         <div class="row">
-            <div class="col" id="adult">Children x 4</div>
-            <div class="col" id="adult_total">$350</div>
+            <div class="col" id="child"></div>
+            <div class="col" id="child_total"></div>
         </div>
 
         <div class="row">
-            <div class="col" id="adult"><b>Total</b></div>
-            <div class="col" id="adult_total">$350</div>
+            <div class="col" id="total_label"><b>Total</b></div>
+            <div class="col" id="total"></div>
         </div>
     </div>
 
@@ -219,7 +221,7 @@
 </div>
 </div>
 
-
+{{-- <div id="result"></div> --}}
 
 <!-- Conditional Requirement -->
 <div class="checkbox pcheck">
@@ -249,43 +251,4 @@
 </form>
 
     </div>
-     {{-- <script>
-         //function that toggles visibilty of payment section and buttons
-        function toggle() {
-
-            //retrieve checkbox object
-            var cash = document.getElementById("cash");
-
-            //retreive payment section object
-            var payment_section= document.getElementById('payment');
-
-            //retrieve card button object
-            var payment_card= document.getElementById('submit_card');
-
-            //retrieve cash button object
-            var payment_cash= document.getElementById('submit_cash');
-
-            //retrive credit card input fields
-            var cc_num = document.getElementById('cc_num');
-            var month = document.getElementById('month');
-            var year = document.getElementById('year');
-            var cvc = document.getElementById('cvc');
-
-        if (cash.checked == true) {
-            payment.style.display = "none";
-            payment_card.style.display = "none";
-            payment_cash.style.display = "block";
-
-            cc_num.required = false;
-            month.required = false;
-            year.required = false;
-            cvc.required = false;
-
-        } else {
-             payment.style.display = "block";
-             payment_card.style.display = "block";
-             payment_cash.style.display = "none";
-        }
-        }
-    </script> --}}
 @endsection

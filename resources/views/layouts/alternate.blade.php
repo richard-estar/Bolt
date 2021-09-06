@@ -33,6 +33,7 @@
 <link rel="stylesheet" href="/css/animations.css">
 <script src="/js/toggle.js"></script>
 <script src="/js/price.js"></script>
+
 </head>
 <body>
     <!-- Navigation -->

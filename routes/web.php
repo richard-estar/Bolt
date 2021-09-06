@@ -24,6 +24,10 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
+Route::get('/react', function () {
+    return view('reactpractice');
+});
+
 Route::get('/booking', [bookingController::class, 'index']);
 Route::post('/stepone', [bookingController::class, 'stepone']);
 Route::post('/booking', [bookingController::class, 'book']);
