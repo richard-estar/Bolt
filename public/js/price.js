@@ -1,84 +1,379 @@
+const kingston_adult_ticket_cost = 180;
+const kingston_child_ticket_cost = 90;
+const portland_adult_ticket_cost = 200;
+const portland_child_ticket_cost = 100;
+const negril_adult_ticket_cost = 280;
+const negril_child_ticket_cost = 140;
+const ochorios_adult_ticket_cost = 240;
+const ochorios_child_ticket_cost = 120;
+const montegobay_adult_ticket_cost = 260;
+const montegobay_child_ticket_cost = 130;
+
 var total_cost_of_adult_tickets = 0;
 var total_cost_of_children_tickets = 0;
 var total_cost_of_all_tickets = 0;
-var dest_total = 0;
-var adults_tickets = 0;
-var children_tickets = 0;
-const kingston_adult_ticket_cost = 180;
-const kingston_child_ticket_cost = 90;
+
+
+/*************Make sure at least one destination is checked***************** */
+function minimum_check() {
+
+    /**get status of checkboxes**/
+    var kingston = $("#destinations-0").prop("checked");
+    var portland = $("#destinations-1").prop("checked");
+    var negril = $("#destinations-2").prop("checked");
+    var ochorios = $("#destinations-3").prop("checked");
+    var montegobay = $("#destinations-4").prop("checked");
+
+    /** if none is selected set ocho rios to selected */
+    if (kingston == false && portland == false && negril == false && ochorios == false && montegobay == false) {
+        $("#destinations-4").prop("checked", true);
+    }
+
+}
+
+/**
+ * Calculate the values of variables already on screen
+ */
+
+function intial_values() {
+    var adults_tickets = parseInt($("#adult_tickets").val());
+    var children_tickets = parseInt($("#children_tickets").val());
+
+    /**********find out which destinations are currently selected  and calculate******/
+
+
+    /**get status of checkboxes**/
+    var kingston = $("#destinations-0").prop("checked");
+    var portland = $("#destinations-1").prop("checked");
+    var negril = $("#destinations-2").prop("checked");
+    var ochorios = $("#destinations-3").prop("checked");
+    var montegobay = $("#destinations-4").prop("checked");
+
+    if (kingston == true) {
+        var total_cost_of_kingston_adult_tickets = kingston_adult_ticket_cost * adults_tickets;
+        var total_cost_of_kingston_children_tickets = kingston_child_ticket_cost * children_tickets;
+        total_cost_of_adult_tickets = total_cost_of_adult_tickets + total_cost_of_kingston_adult_tickets;
+        total_cost_of_children_tickets = total_cost_of_children_tickets + total_cost_of_kingston_children_tickets;
+        total_cost_of_all_tickets = total_cost_of_adult_tickets + total_cost_of_children_tickets;
+
+        // console.log(
+        //     "kingston : \n" +
+        //     "kingston adult : " + total_cost_of_kingston_adult_tickets + "\n" +
+        //     "kingston children : " + total_cost_of_kingston_children_tickets + "\n" +
+        //     "adults : " + total_cost_of_adult_tickets + "\n" +
+        //     "children : " + total_cost_of_children_tickets + "\n" +
+        //     "total : " + total_cost_of_all_tickets
+        // );
+    }
+
+    if (portland == true) {
+        var total_cost_of_portland_adult_tickets = portland_adult_ticket_cost * adults_tickets;
+        var total_cost_of_portland_children_tickets = portland_child_ticket_cost * children_tickets;
+        total_cost_of_adult_tickets = total_cost_of_adult_tickets + total_cost_of_portland_adult_tickets;
+        total_cost_of_children_tickets = total_cost_of_children_tickets + total_cost_of_portland_children_tickets;
+        total_cost_of_all_tickets = total_cost_of_adult_tickets + total_cost_of_children_tickets;
+        // console.log(
+        //     "kingston : \n" +
+        //     "kingston adult : " + total_cost_of_kingston_adult_tickets + "\n" +
+        //     "kingston children : " + total_cost_of_kingston_children_tickets + "\n" +
+        //     "adults : " + total_cost_of_adult_tickets + "\n" +
+        //     "children : " + total_cost_of_children_tickets + "\n" +
+        //     "total : " + total_cost_of_all_tickets
+        // );
+    }
+
+    if (negril == true) {
+        var total_cost_of_negril_adult_tickets = negril_adult_ticket_cost * adults_tickets;
+        var total_cost_of_negril_children_tickets = negril_child_ticket_cost * children_tickets;
+        total_cost_of_adult_tickets = total_cost_of_adult_tickets + total_cost_of_negril_adult_tickets;
+        total_cost_of_children_tickets = total_cost_of_children_tickets + total_cost_of_negril_children_tickets;
+        total_cost_of_all_tickets = total_cost_of_adult_tickets + total_cost_of_children_tickets;
+
+        // console.log(
+        //     "negril : \n" +
+        //     "adults : " + total_cost_of_adult_tickets + "\n" +
+        //     "children : " + total_cost_of_children_tickets + "\n" +
+        //     "total : " + total_cost_of_all_tickets
+        // );
+    }
+
+    if (ochorios == true) {
+        var total_cost_of_ochorios_adult_tickets = ochorios_adult_ticket_cost * adults_tickets;
+        var total_cost_of_ochorios_children_tickets = ochorios_child_ticket_cost * children_tickets;
+        total_cost_of_adult_tickets = total_cost_of_adult_tickets + total_cost_of_ochorios_adult_tickets;
+        total_cost_of_children_tickets = total_cost_of_children_tickets + total_cost_of_ochorios_children_tickets;
+        total_cost_of_all_tickets = total_cost_of_adult_tickets + total_cost_of_children_tickets;
+
+        // console.log(
+        //     "ochorios : \n" +
+        //     "adults : " + total_cost_of_adult_tickets + "\n" +
+        //     "children : " + total_cost_of_children_tickets + "\n" +
+        //     "total : " + total_cost_of_all_tickets
+        // );
+    }
+
+    if (montegobay == true) {
+        var total_cost_of_montegobay_adult_tickets = montegobay_adult_ticket_cost * adults_tickets;
+        var total_cost_of_montegobay_children_tickets = montegobay_child_ticket_cost * children_tickets;
+        total_cost_of_adult_tickets = total_cost_of_adult_tickets + total_cost_of_montegobay_adult_tickets;
+        total_cost_of_children_tickets = total_cost_of_children_tickets + total_cost_of_montegobay_children_tickets;
+        total_cost_of_all_tickets = total_cost_of_adult_tickets + total_cost_of_children_tickets;
+
+        // console.log(
+        //     "montegobay : \n" +
+        //     "adults : " + total_cost_of_adult_tickets + "\n" +
+        //     "children : " + total_cost_of_children_tickets + "\n" +
+        //     "total : " + total_cost_of_all_tickets
+        // );
+    }
+    update_totals(children_tickets, adults_tickets, total_cost_of_children_tickets, total_cost_of_adult_tickets, total_cost_of_all_tickets);
+
+}
+
+
+/************* Run intial functoins***************************************/
+$(document).ready(
+    function () {
+        minimum_check();
+        intial_values();
+    }
+);
 
 
 
-// set default price from DOM
-// $(document).ready(
-//     function () {
-//         if ($(location).attr('pathname') != "stepone") {
-//             $('#adult').text("Adult x 1");
-//             $('#adult_total').text("$0");
-//             $('#total').text("$0");
-//         }
-//     }
-// );
+
+function update_totals(child_ticket, adult_ticket, child_total, adult_total, total) {
+
+    $("#adult_text").text("Adult x " + adult_ticket);
+    $("#adult_total").text("$ " + adult_total);
+    $("#child").text("Child(ren) x " + child_ticket);
+    $("#child_total").text("$ " + child_total);
+    $("#total").text("$ " + total);
+    $("#grandtotal").val(total);
+}
 
 // Update price if kingston is clicked
 $(document).ready(function () {
-
-
     $('#destinations-0').click(function () {
-
         var adults_tickets = parseInt($("#adult_tickets").val());
         var children_tickets = parseInt($("#children_tickets").val());
-        // console.log(
-        //     "adults_tickets :" + adults_tickets + "\n" +
-        //     "children_tickets :" + children_tickets + "\n" +
-        //     "adults_tickets_totals :" + adults_tickets_total + "\n" +
-        //     "children_tickets_total :" + children_tickets_total + "\n" +
-        //     "kingston_adult :" + kingston_adult + "\n" +
-        //     "kingston_child :" + kingston_child + "\n"
-        // );
-
-
-
         if ($(this).prop("checked") == true) {
-            // $("#result").html("Checkbox is checked.");
-            total_cost_of_adult_tickets = adults_tickets * kingston_adult_ticket_cost;
-            console.log("total cost of adult tickets : " + total_cost_of_adult_tickets);
-            total_cost_of_children_tickets = children_tickets * kingston_child_ticket_cost;
-            console.log("total cost of children tickets : " + total_cost_of_children_tickets);
+            var total_cost_of_kingston_adult_tickets = kingston_adult_ticket_cost * adults_tickets;
+            var total_cost_of_kingston_children_tickets = kingston_child_ticket_cost * children_tickets;
+            console.log("total cost of adult tickets precalculation : " + total_cost_of_adult_tickets);
+            total_cost_of_adult_tickets = total_cost_of_adult_tickets + total_cost_of_kingston_adult_tickets;
+            total_cost_of_children_tickets = total_cost_of_children_tickets + total_cost_of_kingston_children_tickets;
             total_cost_of_all_tickets = total_cost_of_adult_tickets + total_cost_of_children_tickets;
-            console.log("total cost of all tickets : " + total_cost_of_all_tickets);
-            $('#total').text("$" + total_cost_of_all_tickets);
+            console.log(
+                "kingston : \n" +
+                "kingston adult : " + total_cost_of_kingston_adult_tickets + "\n" +
+                "kingston children : " + total_cost_of_kingston_children_tickets + "\n" +
+                "adults : " + total_cost_of_adult_tickets + "\n" +
+                "children : " + total_cost_of_children_tickets + "\n" +
+                "total : " + total_cost_of_all_tickets
+            );
         }
-
-
 
         else if ($(this).prop("checked") == false) {
-            //$("#result").html("Checkbox is unchecked.");
-            total_cost_of_adult_tickets = total_cost_of_adult_tickets - (adults_tickets * kingston_adult_ticket_cost);
-            console.log("total cost of adult tickets : " + total_cost_of_adult_tickets);
-            total_cost_of_children_tickets = total_cost_of_children_tickets - (children_tickets * kingston_child_ticket_cost);
-            console.log("total cost of children tickets : " + total_cost_of_children_tickets);
-            total_cost_of_all_tickets = total_cost_of_all_tickets - total_cost_of_adult_tickets;
-            total_cost_of_all_tickets = total_cost_of_all_tickets - total_cost_of_children_tickets;
-            console.log("total cost of all tickets : " + total_cost_of_all_tickets);
-            $('#total').text("$" + total_cost_of_all_tickets);
+            var total_cost_of_kingston_adult_tickets = kingston_adult_ticket_cost * adults_tickets;
+            var total_cost_of_kingston_children_tickets = kingston_child_ticket_cost * children_tickets;
+            total_cost_of_adult_tickets = total_cost_of_adult_tickets - total_cost_of_kingston_adult_tickets;
+            total_cost_of_children_tickets = total_cost_of_children_tickets - total_cost_of_kingston_children_tickets;
+            total_cost_of_all_tickets = total_cost_of_adult_tickets + total_cost_of_children_tickets;
+            console.log(
+                "kingston : \n" +
+                "kingston adult : " + total_cost_of_kingston_adult_tickets + "\n" +
+                "kingston children : " + total_cost_of_kingston_children_tickets + "\n" +
+                "adults : " + total_cost_of_adult_tickets + "\n" +
+                "children : " + total_cost_of_children_tickets + "\n" +
+                "total : " + total_cost_of_all_tickets
+            );
         }
+        update_totals(children_tickets, adults_tickets, total_cost_of_children_tickets, total_cost_of_adult_tickets, total_cost_of_all_tickets);
+
     });
 });
+
+
+
+// Update price if portland is clicked
+$(document).ready(function () {
+    $('#destinations-1').click(function () {
+        var adults_tickets = parseInt($("#adult_tickets").val());
+        var children_tickets = parseInt($("#children_tickets").val());
+        if ($(this).prop("checked") == true) {
+            var total_cost_of_portland_adult_tickets = portland_adult_ticket_cost * adults_tickets;
+            var total_cost_of_portland_children_tickets = portland_child_ticket_cost * children_tickets;
+            total_cost_of_adult_tickets = total_cost_of_adult_tickets + total_cost_of_portland_adult_tickets;
+            total_cost_of_children_tickets = total_cost_of_children_tickets + total_cost_of_portland_children_tickets;
+            total_cost_of_all_tickets = total_cost_of_adult_tickets + total_cost_of_children_tickets;
+            console.log(
+                "portland checked: \n" +
+                "adults : " + total_cost_of_adult_tickets + "\n" +
+                "children : " + total_cost_of_children_tickets + "\n" +
+                "total : " + total_cost_of_all_tickets
+            );
+
+        }
+
+        else if ($(this).prop("checked") == false) {
+            var total_cost_of_portland_adult_tickets = portland_adult_ticket_cost * adults_tickets;
+            var total_cost_of_portland_children_tickets = portland_child_ticket_cost * children_tickets;
+            total_cost_of_adult_tickets = total_cost_of_adult_tickets - total_cost_of_portland_adult_tickets;
+            total_cost_of_children_tickets = total_cost_of_children_tickets - total_cost_of_portland_children_tickets;
+            total_cost_of_all_tickets = total_cost_of_adult_tickets + total_cost_of_children_tickets;
+            console.log(
+                "portland unchecked: \n" +
+                "adults : " + total_cost_of_adult_tickets + "\n" +
+                "children : " + total_cost_of_children_tickets + "\n" +
+                "total : " + total_cost_of_all_tickets
+            );
+        }
+        update_totals(children_tickets, adults_tickets, total_cost_of_children_tickets, total_cost_of_adult_tickets, total_cost_of_all_tickets);
+
+    });
+});
+
+
+
+// Update price if negril is clicked
+$(document).ready(function () {
+    $('#destinations-2').click(function () {
+        var adults_tickets = parseInt($("#adult_tickets").val());
+        var children_tickets = parseInt($("#children_tickets").val());
+        if ($(this).prop("checked") == true) {
+            var total_cost_of_negril_adult_tickets = negril_adult_ticket_cost * adults_tickets;
+            var total_cost_of_negril_children_tickets = negril_child_ticket_cost * children_tickets;
+            total_cost_of_adult_tickets = total_cost_of_adult_tickets + total_cost_of_negril_adult_tickets;
+            total_cost_of_children_tickets = total_cost_of_children_tickets + total_cost_of_negril_children_tickets;
+            total_cost_of_all_tickets = total_cost_of_adult_tickets + total_cost_of_children_tickets;
+            // console.log(
+            //     "portland checked: \n" +
+            //     "adults : " + total_cost_of_adult_tickets + "\n" +
+            //     "children : " + total_cost_of_children_tickets + "\n" +
+            //     "total : " + total_cost_of_all_tickets
+            // );
+
+        }
+
+        else if ($(this).prop("checked") == false) {
+            var total_cost_of_negril_adult_tickets = negril_adult_ticket_cost * adults_tickets;
+            var total_cost_of_negril_children_tickets = negril_child_ticket_cost * children_tickets;
+            total_cost_of_adult_tickets = total_cost_of_adult_tickets - total_cost_of_negril_adult_tickets;
+            total_cost_of_children_tickets = total_cost_of_children_tickets - total_cost_of_negril_children_tickets;
+            total_cost_of_all_tickets = total_cost_of_adult_tickets + total_cost_of_children_tickets;
+            // console.log(
+            //     "portland unchecked: \n" +
+            //     "adults : " + total_cost_of_adult_tickets + "\n" +
+            //     "children : " + total_cost_of_children_tickets + "\n" +
+            //     "total : " + total_cost_of_all_tickets
+            // );
+        }
+        update_totals(children_tickets, adults_tickets, total_cost_of_children_tickets, total_cost_of_adult_tickets, total_cost_of_all_tickets);
+
+    });
+});
+
+// Update price if ochorios is clicked
+$(document).ready(function () {
+    $('#destinations-3').click(function () {
+        var adults_tickets = parseInt($("#adult_tickets").val());
+        var children_tickets = parseInt($("#children_tickets").val());
+        if ($(this).prop("checked") == true) {
+            var total_cost_of_ochorios_adult_tickets = ochorios_adult_ticket_cost * adults_tickets;
+            var total_cost_of_ochorios_children_tickets = ochorios_child_ticket_cost * children_tickets;
+            total_cost_of_adult_tickets = total_cost_of_adult_tickets + total_cost_of_ochorios_adult_tickets;
+            total_cost_of_children_tickets = total_cost_of_children_tickets + total_cost_of_ochorios_children_tickets;
+            total_cost_of_all_tickets = total_cost_of_adult_tickets + total_cost_of_children_tickets;
+            // console.log(
+            //     "portland checked: \n" +
+            //     "adults : " + total_cost_of_adult_tickets + "\n" +
+            //     "children : " + total_cost_of_children_tickets + "\n" +
+            //     "total : " + total_cost_of_all_tickets
+            // );
+
+        }
+
+        else if ($(this).prop("checked") == false) {
+            var total_cost_of_ochorios_adult_tickets = ochorios_adult_ticket_cost * adults_tickets;
+            var total_cost_of_ochorios_children_tickets = ochorios_child_ticket_cost * children_tickets;
+            total_cost_of_adult_tickets = total_cost_of_adult_tickets - total_cost_of_ochorios_adult_tickets;
+            total_cost_of_children_tickets = total_cost_of_children_tickets - total_cost_of_ochorios_children_tickets;
+            total_cost_of_all_tickets = total_cost_of_adult_tickets + total_cost_of_children_tickets;
+            // console.log(
+            //     "portland unchecked: \n" +
+            //     "adults : " + total_cost_of_adult_tickets + "\n" +
+            //     "children : " + total_cost_of_children_tickets + "\n" +
+            //     "total : " + total_cost_of_all_tickets
+            // );
+        }
+        update_totals(children_tickets, adults_tickets, total_cost_of_children_tickets, total_cost_of_adult_tickets, total_cost_of_all_tickets);
+
+    });
+});
+
+
+// Update price if montegobay is clicked
+$(document).ready(function () {
+    $('#destinations-4').click(function () {
+        var adults_tickets = parseInt($("#adult_tickets").val());
+        var children_tickets = parseInt($("#children_tickets").val());
+        if ($(this).prop("checked") == true) {
+            var total_cost_of_montegobay_adult_tickets = montegobay_adult_ticket_cost * adults_tickets;
+            var total_cost_of_montegobay_children_tickets = montegobay_child_ticket_cost * children_tickets;
+            total_cost_of_adult_tickets = total_cost_of_adult_tickets + total_cost_of_montegobay_adult_tickets;
+            total_cost_of_children_tickets = total_cost_of_children_tickets + total_cost_of_montegobay_children_tickets;
+            total_cost_of_all_tickets = total_cost_of_adult_tickets + total_cost_of_children_tickets;
+            // console.log(
+            //     "portland checked: \n" +
+            //     "adults : " + total_cost_of_adult_tickets + "\n" +
+            //     "children : " + total_cost_of_children_tickets + "\n" +
+            //     "total : " + total_cost_of_all_tickets
+            // );
+
+        }
+
+        else if ($(this).prop("checked") == false) {
+            var total_cost_of_montegobay_adult_tickets = montegobay_adult_ticket_cost * adults_tickets;
+            var total_cost_of_montegobay_children_tickets = montegobay_child_ticket_cost * children_tickets;
+            total_cost_of_adult_tickets = total_cost_of_adult_tickets - total_cost_of_montegobay_adult_tickets;
+            total_cost_of_children_tickets = total_cost_of_children_tickets - total_cost_of_montegobay_children_tickets;
+            total_cost_of_all_tickets = total_cost_of_adult_tickets + total_cost_of_children_tickets;
+            // console.log(
+            //     "portland unchecked: \n" +
+            //     "adults : " + total_cost_of_adult_tickets + "\n" +
+            //     "children : " + total_cost_of_children_tickets + "\n" +
+            //     "total : " + total_cost_of_all_tickets
+            // );
+        }
+        update_totals(children_tickets, adults_tickets, total_cost_of_children_tickets, total_cost_of_adult_tickets, total_cost_of_all_tickets);
+
+    });
+});
+
 
 // this function updates the price once dropbox is changed
 $(document).ready(function () {
     $("#adult_tickets").change(
         function () {
-            adults_tickets = $("#adult_tickets").val();
-            $("#adult_text").text("Adult x" + adults_tickets);
+            adults_tickets = parseInt($("#adult_tickets").val());
+            total_cost_of_adult_tickets = total_cost_of_adult_tickets * adults_tickets;
+            total_cost_of_all_tickets = total_cost_of_adult_tickets + total_cost_of_children_tickets;
+            $("#adult_text").text("Adult x " + adults_tickets);
             $("#adult_total").text("$ " + total_cost_of_adult_tickets);
+            $("#total").text("$ " + total_cost_of_all_tickets);
+            $("#grandtotal").val(total_cost_of_all_tickets);
+
         });
 
     $("#children_tickets").change(
         function () {
-            child_tickets = $("#children_tickets").val();
-            $("#child").text("Children x" + child_tickets);
-            $("#child_total").text("$ " + total_cost_of_adult_tickets);
+            child_tickets = parseInt($("#children_tickets").val());
+            total_cost_of_children_tickets = total_cost_of_children_tickets * child_tickets;
+            total_cost_of_all_tickets = total_cost_of_adult_tickets + total_cost_of_children_tickets;
+            $("#child").text("Child(ren) x " + child_tickets);
+            $("#child_total").text("$ " + total_cost_of_children_tickets);
+            $("#total").text("$ " + total_cost_of_all_tickets);
+            $("#grandtotal").val(total_cost_of_all_tickets);
         });
 });
