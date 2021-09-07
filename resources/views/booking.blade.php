@@ -94,6 +94,7 @@
 
   <div class="col-md-10">
     <select id="adult_tickets" name="adults" class="form-control">
+      <option value="0"  @if(isset($adults) && $adults == "0")selected @endif>0</option>
       <option value="1"  @if(isset($adults) && $adults == "1")selected @endif>1</option>
       <option value="2" @if(isset($adults) && $adults == "2")selected @endif>2</option>
       <option value="3" @if(isset($adults) && $adults == "3")selected @endif>3</option>
@@ -110,6 +111,7 @@
 
   <div class="col-md-10">
     <select id="children_tickets" name="children" class="form-control">
+      <option value="0"  @if(isset($adults) && $adults == "0")selected @endif>0</option>
       <option value="1"  @if(isset($children) && $children == "1")selected @endif>1</option>
       <option value="2" @if(isset($children) && $children == "2")selected @endif>2</option>
       <option value="3" @if(isset($children) && $children == "3")selected @endif>3</option>
