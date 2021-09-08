@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="insight-app-sec-validation" content="f1a18704-206f-4db6-abd6-0e6eb8df3711">
     <title>@yield('title')</title>
 
 <!-- MDB -->
