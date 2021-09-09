@@ -55,7 +55,7 @@
           <a class="nav-link" href="/booking">Bookings</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Services</a>
+          <a class="nav-link" href="/faq">FAQs</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/contact">Contact</a>

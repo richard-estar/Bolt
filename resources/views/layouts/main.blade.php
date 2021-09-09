@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {{-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'"> --}}
     <meta name="insight-app-sec-validation" content="f1a18704-206f-4db6-abd6-0e6eb8df3711">
     <title>@yield('title')</title>
 
@@ -29,6 +30,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,300;0,400;0,600;0,700;1,100&display=swap" rel="stylesheet">
 
+<script src="/js/toggle.js"></script>
+<script src="/js/price.js"></script>
+<script src="/js/general.js"></script>
 
 <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/animations.css">
@@ -36,7 +40,7 @@
 </head>
 <body>
     <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
     <a class="navbar-brand" href="/"><img src="/images/logo/logosm.png" alt="logo" width="250px"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,7 +57,7 @@
           <a class="nav-link" href="/booking">Bookings</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/">Faqs</a>
+          <a class="nav-link" href="/faq">FAQs</a>
         </li>
 
         <li class="nav-item">
@@ -74,13 +78,12 @@
                         </a>
                         <p class="mb20">Booking, reviews and advices on hotels, resorts, flights, vacation rentals, travel packages, and lots more!</p>
 
-                        <a href="#" class="footerlink fa fa-facebook icons"></a>
-                        <a href="#" class="footerlink fa fa-twitter icons" ></a>
-                        <a href="#" class="footerlink fa fa-google icons" ></a>
-                        <a href="#" class="footerlink fa fa-linkedin icons" ></a>
-                        <a href="#" class="footerlink fa fa-youtube icons" ></a>
-                        <a href="#" class="footerlink fa fa-instagram icons" ></a>
-                        <a href="#" class="footerlink fa fa-pinterest icons" ></a>
+                        <a href="#" class="footerlinki fa fa-facebook icons"></a>
+                        <a href="#" class="footerlinki fa fa-twitter icons" ></a>
+                        <a href="#" class="footerlinki fa fa-google icons" ></a>
+                        <a href="#" class="footerlinki fa fa-youtube icons" ></a>
+                        <a href="#" class="footerlinki fa fa-instagram icons" ></a>
+                        <a href="#" class="footerlinki fa fa-pinterest icons" ></a>
                     </div>
 
                     <div class="col-md-3">

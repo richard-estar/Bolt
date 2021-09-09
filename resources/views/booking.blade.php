@@ -1,4 +1,4 @@
-@extends('layouts.alternate')
+@extends('layouts.main')
 
 @section('title')
     Booking | Catch A Vibes

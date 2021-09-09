@@ -208,6 +208,20 @@ footer#main-footer {
     color: #E79F09;
 }
 
+.footerlinki
+{
+    color:#1375C1;
+    text-decoration: none;
+}
+
+.footerlinki:hover
+{
+    color:white;
+    text-decoration: none;
+}
+
+
+
 .icons
 {
     font-size:25px;
