@@ -28,6 +28,13 @@ Route::get('/faq', function () {
     return view('faq');
 });
 
+Route::get('/terms', function () {
+    return view('terms');
+});
+
+Route::get('/privacy', function () {
+    return view('privacy');
+});
 
 // Route::get('/react', function () {
 //     return view('reactpractice');

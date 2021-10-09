@@ -46,7 +46,9 @@ class bookingController extends Controller
             $booking->transactionId = $attempt;
             $booking->save();
 
-            return view('result', ["result" => 1, "destinations" => $booking->destination, "guests" => $booking->guests, "transactionId" => $attempt, "total" => $booking->total, "date" => $booking->date]);
+            $guests = (int)$booking->adults + (int)$booking->children;
+
+            return view('result', ["result" => 1, "destinations" => $booking->destination, "guests" => $guests, "transactionId" => $attempt, "total" => $booking->total, "date" => $booking->date]);
         } else {
 
             return view('result', ["result" => 3]);

@@ -59,21 +59,16 @@ function intial_values() {
     var ochorios = $("#destinations-3").prop("checked");
     var montegobay = $("#destinations-4").prop("checked");
 
+    if (adults_tickets == 0 && children_tickets == 0) {
+        $("#adult_tickets").val("1");
+    }
+
     if (kingston == true) {
         var total_cost_of_kingston_adult_tickets = kingston_adult_ticket_cost * adults_tickets;
         var total_cost_of_kingston_children_tickets = kingston_child_ticket_cost * children_tickets;
         total_cost_of_adult_tickets = total_cost_of_adult_tickets + total_cost_of_kingston_adult_tickets;
         total_cost_of_children_tickets = total_cost_of_children_tickets + total_cost_of_kingston_children_tickets;
         total_cost_of_all_tickets = total_cost_of_adult_tickets + total_cost_of_children_tickets;
-
-        // console.log(
-        //     "kingston : \n" +
-        //     "kingston adult : " + total_cost_of_kingston_adult_tickets + "\n" +
-        //     "kingston children : " + total_cost_of_kingston_children_tickets + "\n" +
-        //     "adults : " + total_cost_of_adult_tickets + "\n" +
-        //     "children : " + total_cost_of_children_tickets + "\n" +
-        //     "total : " + total_cost_of_all_tickets
-        // );
     }
 
     if (portland == true) {
@@ -82,14 +77,6 @@ function intial_values() {
         total_cost_of_adult_tickets = total_cost_of_adult_tickets + total_cost_of_portland_adult_tickets;
         total_cost_of_children_tickets = total_cost_of_children_tickets + total_cost_of_portland_children_tickets;
         total_cost_of_all_tickets = total_cost_of_adult_tickets + total_cost_of_children_tickets;
-        // console.log(
-        //     "kingston : \n" +
-        //     "kingston adult : " + total_cost_of_kingston_adult_tickets + "\n" +
-        //     "kingston children : " + total_cost_of_kingston_children_tickets + "\n" +
-        //     "adults : " + total_cost_of_adult_tickets + "\n" +
-        //     "children : " + total_cost_of_children_tickets + "\n" +
-        //     "total : " + total_cost_of_all_tickets
-        // );
     }
 
     if (negril == true) {
@@ -98,13 +85,6 @@ function intial_values() {
         total_cost_of_adult_tickets = total_cost_of_adult_tickets + total_cost_of_negril_adult_tickets;
         total_cost_of_children_tickets = total_cost_of_children_tickets + total_cost_of_negril_children_tickets;
         total_cost_of_all_tickets = total_cost_of_adult_tickets + total_cost_of_children_tickets;
-
-        // console.log(
-        //     "negril : \n" +
-        //     "adults : " + total_cost_of_adult_tickets + "\n" +
-        //     "children : " + total_cost_of_children_tickets + "\n" +
-        //     "total : " + total_cost_of_all_tickets
-        // );
     }
 
     if (ochorios == true) {
@@ -113,13 +93,6 @@ function intial_values() {
         total_cost_of_adult_tickets = total_cost_of_adult_tickets + total_cost_of_ochorios_adult_tickets;
         total_cost_of_children_tickets = total_cost_of_children_tickets + total_cost_of_ochorios_children_tickets;
         total_cost_of_all_tickets = total_cost_of_adult_tickets + total_cost_of_children_tickets;
-
-        // console.log(
-        //     "ochorios : \n" +
-        //     "adults : " + total_cost_of_adult_tickets + "\n" +
-        //     "children : " + total_cost_of_children_tickets + "\n" +
-        //     "total : " + total_cost_of_all_tickets
-        // );
     }
 
     if (montegobay == true) {
@@ -128,16 +101,8 @@ function intial_values() {
         total_cost_of_adult_tickets = total_cost_of_adult_tickets + total_cost_of_montegobay_adult_tickets;
         total_cost_of_children_tickets = total_cost_of_children_tickets + total_cost_of_montegobay_children_tickets;
         total_cost_of_all_tickets = total_cost_of_adult_tickets + total_cost_of_children_tickets;
-
-        // console.log(
-        //     "montegobay : \n" +
-        //     "adults : " + total_cost_of_adult_tickets + "\n" +
-        //     "children : " + total_cost_of_children_tickets + "\n" +
-        //     "total : " + total_cost_of_all_tickets
-        // );
     }
     update_totals(children_tickets, adults_tickets, total_cost_of_children_tickets, total_cost_of_adult_tickets, total_cost_of_all_tickets);
-
 }
 
 function minimum_persons_check() {
@@ -147,7 +112,6 @@ function minimum_persons_check() {
 
     if (adults_tickets == 0 && children_tickets == 0) {
         $("#adult_tickets").val("1");
-        intial_values();
     }
 }
 
@@ -155,7 +119,7 @@ function minimum_persons_check() {
 $(document).ready(
     function () {
         minimum_check();
-        //minimum_persons_check();
+        minimum_persons_check();
         intial_values();
     }
 );
@@ -185,14 +149,6 @@ $(document).ready(function () {
             total_cost_of_adult_tickets = total_cost_of_adult_tickets + total_cost_of_kingston_adult_tickets;
             total_cost_of_children_tickets = total_cost_of_children_tickets + total_cost_of_kingston_children_tickets;
             total_cost_of_all_tickets = total_cost_of_adult_tickets + total_cost_of_children_tickets;
-            // console.log(
-            //     "kingston : \n" +
-            //     "kingston adult : " + total_cost_of_kingston_adult_tickets + "\n" +
-            //     "kingston children : " + total_cost_of_kingston_children_tickets + "\n" +
-            //     "adults : " + total_cost_of_adult_tickets + "\n" +
-            //     "children : " + total_cost_of_children_tickets + "\n" +
-            //     "total : " + total_cost_of_all_tickets
-            // );
         }
 
         else if ($(this).prop("checked") == false) {
@@ -201,14 +157,6 @@ $(document).ready(function () {
             total_cost_of_adult_tickets = total_cost_of_adult_tickets - total_cost_of_kingston_adult_tickets;
             total_cost_of_children_tickets = total_cost_of_children_tickets - total_cost_of_kingston_children_tickets;
             total_cost_of_all_tickets = total_cost_of_adult_tickets + total_cost_of_children_tickets;
-            // console.log(
-            //     "kingston : \n" +
-            //     "kingston adult : " + total_cost_of_kingston_adult_tickets + "\n" +
-            //     "kingston children : " + total_cost_of_kingston_children_tickets + "\n" +
-            //     "adults : " + total_cost_of_adult_tickets + "\n" +
-            //     "children : " + total_cost_of_children_tickets + "\n" +
-            //     "total : " + total_cost_of_all_tickets
-            // );
         }
         update_totals(children_tickets, adults_tickets, total_cost_of_children_tickets, total_cost_of_adult_tickets, total_cost_of_all_tickets);
 
@@ -228,13 +176,6 @@ $(document).ready(function () {
             total_cost_of_adult_tickets = total_cost_of_adult_tickets + total_cost_of_portland_adult_tickets;
             total_cost_of_children_tickets = total_cost_of_children_tickets + total_cost_of_portland_children_tickets;
             total_cost_of_all_tickets = total_cost_of_adult_tickets + total_cost_of_children_tickets;
-            // console.log(
-            //     "portland checked: \n" +
-            //     "adults : " + total_cost_of_adult_tickets + "\n" +
-            //     "children : " + total_cost_of_children_tickets + "\n" +
-            //     "total : " + total_cost_of_all_tickets
-            // );
-
         }
 
         else if ($(this).prop("checked") == false) {
@@ -243,12 +184,6 @@ $(document).ready(function () {
             total_cost_of_adult_tickets = total_cost_of_adult_tickets - total_cost_of_portland_adult_tickets;
             total_cost_of_children_tickets = total_cost_of_children_tickets - total_cost_of_portland_children_tickets;
             total_cost_of_all_tickets = total_cost_of_adult_tickets + total_cost_of_children_tickets;
-            // console.log(
-            //     "portland unchecked: \n" +
-            //     "adults : " + total_cost_of_adult_tickets + "\n" +
-            //     "children : " + total_cost_of_children_tickets + "\n" +
-            //     "total : " + total_cost_of_all_tickets
-            // );
         }
         update_totals(children_tickets, adults_tickets, total_cost_of_children_tickets, total_cost_of_adult_tickets, total_cost_of_all_tickets);
 
@@ -268,13 +203,6 @@ $(document).ready(function () {
             total_cost_of_adult_tickets = total_cost_of_adult_tickets + total_cost_of_negril_adult_tickets;
             total_cost_of_children_tickets = total_cost_of_children_tickets + total_cost_of_negril_children_tickets;
             total_cost_of_all_tickets = total_cost_of_adult_tickets + total_cost_of_children_tickets;
-            // console.log(
-            //     "portland checked: \n" +
-            //     "adults : " + total_cost_of_adult_tickets + "\n" +
-            //     "children : " + total_cost_of_children_tickets + "\n" +
-            //     "total : " + total_cost_of_all_tickets
-            // );
-
         }
 
         else if ($(this).prop("checked") == false) {
@@ -283,12 +211,6 @@ $(document).ready(function () {
             total_cost_of_adult_tickets = total_cost_of_adult_tickets - total_cost_of_negril_adult_tickets;
             total_cost_of_children_tickets = total_cost_of_children_tickets - total_cost_of_negril_children_tickets;
             total_cost_of_all_tickets = total_cost_of_adult_tickets + total_cost_of_children_tickets;
-            // console.log(
-            //     "portland unchecked: \n" +
-            //     "adults : " + total_cost_of_adult_tickets + "\n" +
-            //     "children : " + total_cost_of_children_tickets + "\n" +
-            //     "total : " + total_cost_of_all_tickets
-            // );
         }
         update_totals(children_tickets, adults_tickets, total_cost_of_children_tickets, total_cost_of_adult_tickets, total_cost_of_all_tickets);
 
@@ -306,13 +228,6 @@ $(document).ready(function () {
             total_cost_of_adult_tickets = total_cost_of_adult_tickets + total_cost_of_ochorios_adult_tickets;
             total_cost_of_children_tickets = total_cost_of_children_tickets + total_cost_of_ochorios_children_tickets;
             total_cost_of_all_tickets = total_cost_of_adult_tickets + total_cost_of_children_tickets;
-            // console.log(
-            //     "portland checked: \n" +
-            //     "adults : " + total_cost_of_adult_tickets + "\n" +
-            //     "children : " + total_cost_of_children_tickets + "\n" +
-            //     "total : " + total_cost_of_all_tickets
-            // );
-
         }
 
         else if ($(this).prop("checked") == false) {
@@ -321,12 +236,6 @@ $(document).ready(function () {
             total_cost_of_adult_tickets = total_cost_of_adult_tickets - total_cost_of_ochorios_adult_tickets;
             total_cost_of_children_tickets = total_cost_of_children_tickets - total_cost_of_ochorios_children_tickets;
             total_cost_of_all_tickets = total_cost_of_adult_tickets + total_cost_of_children_tickets;
-            // console.log(
-            //     "portland unchecked: \n" +
-            //     "adults : " + total_cost_of_adult_tickets + "\n" +
-            //     "children : " + total_cost_of_children_tickets + "\n" +
-            //     "total : " + total_cost_of_all_tickets
-            // );
         }
         update_totals(children_tickets, adults_tickets, total_cost_of_children_tickets, total_cost_of_adult_tickets, total_cost_of_all_tickets);
 
@@ -345,13 +254,6 @@ $(document).ready(function () {
             total_cost_of_adult_tickets = total_cost_of_adult_tickets + total_cost_of_montegobay_adult_tickets;
             total_cost_of_children_tickets = total_cost_of_children_tickets + total_cost_of_montegobay_children_tickets;
             total_cost_of_all_tickets = total_cost_of_adult_tickets + total_cost_of_children_tickets;
-            // console.log(
-            //     "portland checked: \n" +
-            //     "adults : " + total_cost_of_adult_tickets + "\n" +
-            //     "children : " + total_cost_of_children_tickets + "\n" +
-            //     "total : " + total_cost_of_all_tickets
-            // );
-
         }
 
         else if ($(this).prop("checked") == false) {
@@ -360,12 +262,6 @@ $(document).ready(function () {
             total_cost_of_adult_tickets = total_cost_of_adult_tickets - total_cost_of_montegobay_adult_tickets;
             total_cost_of_children_tickets = total_cost_of_children_tickets - total_cost_of_montegobay_children_tickets;
             total_cost_of_all_tickets = total_cost_of_adult_tickets + total_cost_of_children_tickets;
-            // console.log(
-            //     "portland unchecked: \n" +
-            //     "adults : " + total_cost_of_adult_tickets + "\n" +
-            //     "children : " + total_cost_of_children_tickets + "\n" +
-            //     "total : " + total_cost_of_all_tickets
-            // );
         }
         update_totals(children_tickets, adults_tickets, total_cost_of_children_tickets, total_cost_of_adult_tickets, total_cost_of_all_tickets);
 

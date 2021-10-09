@@ -20,7 +20,7 @@ Home | Catch A Vibes
 
       <!-- Slide One - Set the background image for this slide in the line below -->
       <div class="carousel-item carousel-item-mod active" style="background-image:linear-gradient(0deg, rgba(5, 5, 5, 0.2), rgba(46, 42, 44, 0.2)), url('/images/slide2/image2.jpg')">
-        <div class="carousel-caption d-none d-md-block">
+        <div class="carousel-caption d-md-block">
             {{-- <img src="/images/logo/logobg.png" alt="" width="400"> --}}
             <img class="text-focus-in" src="/images/logo/logobg.png" alt="" width="400">
              <h2 class="display-4 tracking-in-expand">Catch A Vibes Bolt Tours and Getaways</h2>
@@ -30,7 +30,7 @@ Home | Catch A Vibes
 
       <!-- Slide Three - Set the background image for this slide in the line below -->
       <div class="carousel-item carousel-item-mod" style="background-image: linear-gradient(0deg, rgba(5, 5, 5, 0.2), rgba(46, 42, 44, 0.2)), url('/images/slide2/image3.jpg')">
-        <div class="carousel-caption d-none d-md-block">
+        <div class="carousel-caption d-md-block">
             {{-- <img src="/images/logo/logobg.png" alt="" width="400"> --}}
             <h2 class=" slidetxt text-focus-in ">Accomodation available</h2>
             <p class="lead tracking-in-expand-fwd"><button type="button" class="btn btn-primary">Click to Learn More</button></p>
@@ -39,7 +39,7 @@ Home | Catch A Vibes
 
           <!-- Slide Three - Set the background image for this slide in the line below -->
       <div class="carousel-item carousel-item-mod" style="background-image: linear-gradient(0deg, rgba(5, 5, 5, 0.2), rgba(46, 42, 44, 0.2)), url('/images/slide2/image4.jpg')">
-        <div class="carousel-caption d-none d-md-block">
+        <div class="carousel-caption d-md-block">
             {{-- <img src="/images/logo/logobg.png" alt="" width="400"> --}}
             <h2 class=" slidetxt text-focus-in ">Packages Starting At $180 USD</h2>
             <p class="lead tracking-in-expand-fwd"><button type="button" class="btn btn-primary">Click to Learn More</button></p>
@@ -48,7 +48,7 @@ Home | Catch A Vibes
 
          <!-- Slide Three - Set the background image for this slide in the line below -->
       <div class="carousel-item carousel-item-mod" style="background-image:linear-gradient(0deg, rgba(5, 5, 5, 0.2), rgba(46, 42, 44, 0.2)), url('/images/slide2/image1.jpg')">
-        <div class="carousel-caption d-none d-md-block">
+        <div class="carousel-caption d-md-block">
           <h2 class=" slidetxt text-focus-in">Tours in jamaica's north coast</h2>
             <p class="lead tracking-in-expand-fwd"><button type="button" class="btn btn-primary">Click to Learn More</button></p>
         </div>

@@ -36,6 +36,7 @@
 
 <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/animations.css">
+<link rel="stylesheet" href="/css/mediaqueries.css">
 
 </head>
 <body>
@@ -98,21 +99,17 @@
                     </div>
                     <div class="col-md-2">
                         <ul class="list list-footer ">
-                            <li><a href="#" class="footerlink">About US</a>
+                            <li><a href="/faq" class="footerlink">Frequently Asked Questions</a>
                             </li>
-                            <li><a href="#" class="footerlink">Press Centre</a>
+                            {{-- <li><a href="#" class="footerlink">Best Price Guarantee</a>
+                            </li> --}}
+                            {{-- <li><a href="#" class="footerlink">Travel News</a>
+                            </li> --}}
+                            <li><a href="/jobs" class="footerlink">Jobs</a>
                             </li>
-                            <li><a href="#" class="footerlink">Best Price Guarantee</a>
-                            </li>
-                            <li><a href="#" class="footerlink">Travel News</a>
-                            </li>
-                            <li><a href="#" class="footerlink">Jobs</a>
-                            </li>
-                            <li><a href="#" class="footerlink">Privacy Policy</a>
+                            <li><a href="/privacy" class="footerlink">Privacy Policy</a>
                             </li>
                             <li><a href="#" class="footerlink">Terms of Use</a>
-                            </li>
-                            <li><a href="#" class="footerlink">Feedback</a>
                             </li>
                         </ul>
                     </div>
@@ -127,6 +124,13 @@
                 </div>
             </div>
         </footer>
+        <script>
+if ( window.history.replaceState ) {
+  window.history.replaceState( null, null, window.location.href );
+}
+</script>
+
         {{-- ----------------------------------------- end footer ---------------------------------------------------------- --}}
 </body>
 </html>
+
